@@ -1,0 +1,24 @@
+/* larger.css */
+
+/* Large Screen Styles (Media Query) */
+@media (min-width: 768px) {
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+        gap: 20px; /* Espaciado entre las columnas */
+    }
+
+    .card.learning-activities,
+    .card.information {
+        grid-column: span 1; /* Cada tarjeta ocupa una sola columna */
+    }
+
+    /* Estilo de la navegación para pantallas grandes */
+    nav ul {
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 2em; /* Aumentar el tamaño de los enlaces en pantallas grandes */
+    }
+}
