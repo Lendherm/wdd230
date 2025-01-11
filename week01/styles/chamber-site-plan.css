@@ -21,7 +21,6 @@ body, html {
     max-width: 1400px; /* Ancho máximo del contenido */
     margin: 0 auto; /* Centra el contenido */
     padding: 0 ; /* Espaciado lateral */
-   
     width: 100%;
 }
 
@@ -229,11 +228,6 @@ body, html {
     color: #ff0000; /* Cambia a rojo cuando pases el mouse sobre el enlace */
 }
 
-
-
-
-
-
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -329,29 +323,6 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Diseño responsive HEADER */
 @media (max-width: 768px) {
     .container {
@@ -410,5 +381,65 @@ body {
     .social-icons {
         justify-content: center; /* Centra los íconos sociales */
     }
-    
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #0f295b;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ocultar el menú horizontal en pantallas pequeñas */
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Mostrar el botón hamburguesa */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Mostrar el menú cuando está activo */
+    header nav ul.show {
+        display: flex;
+    }
+
+    /* Aumentar el tamaño de los enlaces en pantallas pequeñas */
+    nav ul li a {
+        font-size: 1.5em;
+    }
+}
+
+/* Large Screen Styles (Media Query) */
+@media (min-width: 768px) {
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+        gap: 20px; /* Espaciado entre las columnas */
+    }
+
+    .card.learning-activities,
+    .card.information {
+        grid-column: span 1; /* Cada tarjeta ocupa una sola columna */
+    }
+
+    /* Estilo de la navegación para pantallas grandes */
+    nav ul {
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 2em; /* Aumentar el tamaño de los enlaces en pantallas grandes */
+    }
 }
