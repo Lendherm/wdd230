@@ -9,17 +9,18 @@ body {
 /* Contenedor principal */
 #container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between; /* Asegura que la galería y el carrusel estén separados */
     gap: 20px;
     padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-/* Estilos para las tarjetas */
+/* Carrusel y galería */
 .gallery, .main-image {
     display: flex;
     flex-direction: column;
-    width: 48%; /* Ambas ocupan casi el mismo ancho */
+    width: 48%; /* Ambas ocupan casi el mismo ancho en pantallas grandes */
 }
 
 /* Estilos para las imágenes en la galería */
@@ -35,22 +36,56 @@ body {
     border-radius: 4px;
 }
 
-/* Imagen principal */
-.main-image img {
-    width: 100%;
-    height: auto;
+/* Carrusel de imágenes */
+#carousel {
+    position: relative;
+    width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
+    height: 100%; /* Asegura que ocupe todo el espacio disponible en su contenedor */
+    overflow: hidden;
+}
+
+#carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Asegura que las imágenes del carrusel llenen el contenedor */
+}
+
+.carousel-image {
+    flex-shrink: 0; /* Previene que las imágenes se encojan */
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del carrusel */
+    height: auto; /* Mantiene la proporción de las imágenes */
     border-radius: 8px;
 }
 
-/* Para pantallas pequeñas */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
+
+/* Para pantallas pequeñas (apilar el carrusel y la galería) */
 @media (max-width: 1024px) {
     #container {
-        flex-direction: column;
+        flex-direction: column; /* Cambiar de fila a columna */
         align-items: center;
     }
 
     .gallery, .main-image {
-        width: 100%;
+        width: 100%; /* Ambos ocupan todo el ancho */
     }
 
     .gallery {
