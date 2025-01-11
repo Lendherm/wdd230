@@ -4,106 +4,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive con JavaScript</title>
-    <style>
-        /* Estilos básicos */
-        .card {
-            background-color: #f0f0f0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative;
-            width: 800px;
-            height: 550px;
-            margin: 10px;
-        }
+    <title>Header Diseño</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-        .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-        }
-
-        /* Para pantalla pequeña */
-        @media (max-width: 768px) {
-            .card {
-                width: 90vw;
-                height: auto;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/chamber-site-plan.css">
 </head>
 
 <body>
-
-    <div id="container" class="container">
-        <div class="card card-large">
-            <img src="https://picsum.photos/800/550?random=1" alt="Imagen grande">
-        </div>
-        <div class="card card-small">
-            <div class="image-grid">
-                <div><img src="https://picsum.photos/800/550?random=2" alt="Imagen 1"></div>
-                <div><img src="https://picsum.photos/800/550?random=3" alt="Imagen 2"></div>
-                <div><img src="https://picsum.photos/800/550?random=4" alt="Imagen 3"></div>
-                <div><img src="https://picsum.photos/800/550?random=5" alt="Imagen 4"></div>
-                <div><img src="https://picsum.photos/800/550?random=6" alt="Imagen 5"></div>
-                <div><img src="https://picsum.photos/800/550?random=7" alt="Imagen 6"></div>
-                <div><img src="https://picsum.photos/800/550?random=8" alt="Imagen 7"></div>
-                <div><img src="https://picsum.photos/800/550?random=9" alt="Imagen 8"></div>
-                <div><img src="https://picsum.photos/800/550?random=10" alt="Imagen 9"></div>
+    <header class="site-header">
+        <div class="container">
+            <!-- Ícono del menú hamburguesa -->
+            <div class="menu-icon" id="menu-toggle">
+                <span class="menu-icon-symbol">&#9776;</span>
+                <span class="menu-icon-text">Menú</span>
             </div>
+
+            <!-- Aniversario -->
+            <div class="anniversary">
+                <div class="anniversary-title">Cumplimos</div>
+                <div class="anniversary-year">150 años</div>
+                <div class="anniversary-text">de unir, servir y representar</div>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="ruta-a-tu-logo.png" alt="Logo Cámara de Comercio">
+            </div>
+
+            <!-- Botón "Afiliarme" -->
+            <a href="#" class="affiliate-button">QUIERO AFILIARME</a>
         </div>
+    </header>
+
+    <!-- Menú lateral -->
+    <div class="overlay" id="overlay"></div>
+    <div class="side-menu" id="side-menu">
+        <nav>
+            <h2>Menú Principal</h2>
+            <ul>
+                <li><a href="/week01/chamber-site-plan.html"><i class="fas fa-arrow-right"></i> Inicio</a></li>
+                <li><a href="#"><i class="fas fa-arrow-right"></i> Servicios</a></li>
+                <li><a href="#"><i class="fas fa-arrow-right"></i> Representatividad</a></li>
+                <li><a href="#"><i class="fas fa-arrow-right"></i> Eventos</a></li>
+                <li><a href="#"><i class="fas fa-arrow-right"></i> ¿Quiénes Somos?</a></li>
+                <li><a href="#"><i class="fas fa-arrow-right"></i> Directorio de Consejo</a></li>
+                <li><a href="#"><i class="fas fa-arrow-right"></i> Prensa</a></li>
+                <li><a href="#"><i class="fas fa-arrow-right"></i> Blog</a></li>
+                <li><a href="#"><i class="fas fa-arrow-right"></i> Contacto</a></li>
+            </ul>
+
+
+            <div class="contact-info">
+                <!-- Dirección con icono de mapa -->
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> Paseo de la Reforma 42 Colonia Centro, Alcaldía Cuauhtémoc,
+                    C.P. 06040, Ciudad de México. |
+                    <a href="#" style="color: white; text-decoration: underline;">¿Cómo llegar?</a>
+                </p>
+
+                <!-- Correo con icono de email -->
+                <p><i class="fas fa-envelope"></i> primercontacto@ccmexico.com.mx</p>
+
+                <!-- WhatsApp con icono -->
+                <p><i class="fab fa-whatsapp"></i> +52 55 7196 6356</p>
+
+                <!-- Teléfono con icono -->
+                <p><i class="fas fa-phone-alt"></i> 55 36-85-22-69</p>
+            </div>
+
+            <ul class="social-icons">
+                <li><a href="#" class="fab fa-facebook"></a></li>
+                <li><a href="#" class="fab fa-instagram"></a></li>
+                <li><a href="#" class="fab fa-twitter"></a></li>
+                <li><a href="#" class="fab fa-youtube"></a></li>
+                <li><a href="#" class="fab fa-linkedin"></a></li>
+            </ul>
+        </nav>
     </div>
 
-    <script>
-        // Función para manejar el tamaño de la pantalla
-        function checkScreenSize() {
-            const container = document.getElementById("container");
-            const imageGrid = document.querySelector(".image-grid");
+    <main class="content-container">
+        <!-- Carrusel -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="image-link">
+                    <img src="https://picsum.photos/800/550?random=1" style="width:100%" alt="150 AÑOS">
+                    <p>150 AÑOS AL SERVICIO DE MÉXICO</p>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="image-link">
+                    <img src="https://picsum.photos/800/550?random=2" style="width:100%">
+                    <p>Otra imagen en el slideshow</p>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
 
-            // Detecta el tamaño de la pantalla
-            if (window.innerWidth <= 768) {
-                // Para pantallas pequeñas (móvil), quitamos el grid
-                if (imageGrid) {
-                    container.removeChild(imageGrid); // Elimina la imagen grid si es móvil
-                }
-                // Cambiar el contenido o agregar una nueva estructura si es necesario
-                const mobileImage = document.createElement("div");
-                mobileImage.classList.add("card-small");
-                mobileImage.innerHTML = `<img src="https://picsum.photos/800/550?random=2" alt="Imagen móvil">`;
-                container.appendChild(mobileImage); // Añadir imagen para móvil
-            } else {
-                // Para pantallas grandes, agregamos el grid de imágenes
-                if (!imageGrid) {
-                    const gridDiv = document.createElement("div");
-                    gridDiv.classList.add("image-grid");
-                    gridDiv.innerHTML = `
-                    <div><img src="https://picsum.photos/800/550?random=2" alt="Imagen 1"></div>
-                    <div><img src="https://picsum.photos/800/550?random=3" alt="Imagen 2"></div>
-                    <div><img src="https://picsum.photos/800/550?random=4" alt="Imagen 3"></div>
-                    <div><img src="https://picsum.photos/800/550?random=5" alt="Imagen 4"></div>
-                    <div><img src="https://picsum.photos/800/550?random=6" alt="Imagen 5"></div>
-                    <div><img src="https://picsum.photos/800/550?random=7" alt="Imagen 6"></div>
-                    <div><img src="https://picsum.photos/800/550?random=8" alt="Imagen 7"></div>
-                    <div><img src="https://picsum.photos/800/550?random=9" alt="Imagen 8"></div>
-                    <div><img src="https://picsum.photos/800/550?random=10" alt="Imagen 9"></div>
-                `;
-                    container.appendChild(gridDiv);
-                }
-            }
-        }
+        <!-- Cuadrícula de Imágenes -->
+        <div class="image-grid">
+            <a href="#" class="image-link">
+                <img src="https://picsum.photos/800/550?random=3" alt="Networking">
+                <p>Networking</p>
+            </a>
+            <a href="#" class="image-link">
+                <img src="https://picsum.photos/800/550?random=4" alt="Capacitación">
+                <p>Capacitación</p>
+            </a>
+            <a href="#" class="image-link">
+                <img src="https://picsum.photos/800/550?random=5" alt="SIEM">
+                <p>Sistema Empresarial</p>
+            </a>
+            <a href="#" class="image-link">
+                <img src="https://picsum.photos/800/550?random=6" alt="Servicios Legales">
+                <p>Servicios Legales</p>
+            </a>
+            <a href="#" class="image-link">
+                <img src="https://picsum.photos/800/550?random=7" alt="Agenda">
+                <p>Agenda Empresarial</p>
+            </a>
+            <a href="#" class="image-link">
+                <img src="https://picsum.photos/800/550?random=8" alt="Turismo">
+                <p>Servicios Turísticos</p>
+            </a>
+            <a href="#" class="image-link">
+                <img src="https://picsum.photos/800/550?random=9" alt="Comercio">
+                <p>Comercio Internacional</p>
+            </a>
+            <a href="#" class="image-link">
+                <img src="https://picsum.photos/800/550?random=10" alt="Revista">
+                <p>Revista Digital</p>
+            </a>
+        </div>
 
-        // Llamamos a la función cuando se carga la página y también cada vez que se cambia el tamaño
-        window.addEventListener("load", checkScreenSize);
-        window.addEventListener("resize", checkScreenSize);
-    </script>
 
+        <script src="scripts/chamber-site-plan.js"></script>
 </body>
 
 </html>
