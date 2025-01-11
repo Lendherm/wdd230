@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive con JavaScript</title>
+    <style>
+        /* Estilos básicos */
+        .card {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            width: 800px;
+            height: 550px;
+            margin: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        /* Para pantalla pequeña */
+        @media (max-width: 768px) {
+            .card {
+                width: 90vw;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container" class="container">
+        <div class="card card-large">
+            <img src="https://picsum.photos/800/550?random=1" alt="Imagen grande">
+        </div>
+        <div class="card card-small">
+            <div class="image-grid">
+                <div><img src="https://picsum.photos/800/550?random=2" alt="Imagen 1"></div>
+                <div><img src="https://picsum.photos/800/550?random=3" alt="Imagen 2"></div>
+                <div><img src="https://picsum.photos/800/550?random=4" alt="Imagen 3"></div>
+                <div><img src="https://picsum.photos/800/550?random=5" alt="Imagen 4"></div>
+                <div><img src="https://picsum.photos/800/550?random=6" alt="Imagen 5"></div>
+                <div><img src="https://picsum.photos/800/550?random=7" alt="Imagen 6"></div>
+                <div><img src="https://picsum.photos/800/550?random=8" alt="Imagen 7"></div>
+                <div><img src="https://picsum.photos/800/550?random=9" alt="Imagen 8"></div>
+                <div><img src="https://picsum.photos/800/550?random=10" alt="Imagen 9"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función para manejar el tamaño de la pantalla
+        function checkScreenSize() {
+            const container = document.getElementById("container");
+            const imageGrid = document.querySelector(".image-grid");
+
+            // Detecta el tamaño de la pantalla
+            if (window.innerWidth <= 768) {
+                // Para pantallas pequeñas (móvil), quitamos el grid
+                if (imageGrid) {
+                    container.removeChild(imageGrid); // Elimina la imagen grid si es móvil
+                }
+                // Cambiar el contenido o agregar una nueva estructura si es necesario
+                const mobileImage = document.createElement("div");
+                mobileImage.classList.add("card-small");
+                mobileImage.innerHTML = `<img src="https://picsum.photos/800/550?random=2" alt="Imagen móvil">`;
+                container.appendChild(mobileImage); // Añadir imagen para móvil
+            } else {
+                // Para pantallas grandes, agregamos el grid de imágenes
+                if (!imageGrid) {
+                    const gridDiv = document.createElement("div");
+                    gridDiv.classList.add("image-grid");
+                    gridDiv.innerHTML = `
+                    <div><img src="https://picsum.photos/800/550?random=2" alt="Imagen 1"></div>
+                    <div><img src="https://picsum.photos/800/550?random=3" alt="Imagen 2"></div>
+                    <div><img src="https://picsum.photos/800/550?random=4" alt="Imagen 3"></div>
+                    <div><img src="https://picsum.photos/800/550?random=5" alt="Imagen 4"></div>
+                    <div><img src="https://picsum.photos/800/550?random=6" alt="Imagen 5"></div>
+                    <div><img src="https://picsum.photos/800/550?random=7" alt="Imagen 6"></div>
+                    <div><img src="https://picsum.photos/800/550?random=8" alt="Imagen 7"></div>
+                    <div><img src="https://picsum.photos/800/550?random=9" alt="Imagen 8"></div>
+                    <div><img src="https://picsum.photos/800/550?random=10" alt="Imagen 9"></div>
+                `;
+                    container.appendChild(gridDiv);
+                }
+            }
+        }
+
+        // Llamamos a la función cuando se carga la página y también cada vez que se cambia el tamaño
+        window.addEventListener("load", checkScreenSize);
+        window.addEventListener("resize", checkScreenSize);
+    </script>
+
+</body>
+
+</html>

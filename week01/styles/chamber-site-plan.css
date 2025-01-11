@@ -1,0 +1,574 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Estilo del header */
+.site-header {
+    background-color: #002a5c; /* Azul oscuro */
+    color: white;
+    padding: 0%;
+    width: 100%; /* Abarca todo el ancho de la pantalla */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Espacio entre los divs */
+    max-width: 1400px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0 ; /* Espaciado lateral */
+   
+    width: 100%;
+}
+
+/* Estilo del menú */
+.menu-icon {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-icon-symbol {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.menu-icon-text {
+    font-size: 16px;
+}
+
+/* Estilo del aniversario */
+.anniversary {
+    text-align: center;
+    color: gold;
+    line-height: 1.2;
+}
+
+.anniversary-title {
+    font-size: 14px;
+}
+
+.anniversary-year {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.anniversary-text {
+    font-size: 12px;
+}
+
+/* Estilo del logo */
+.logo {
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center; /* Asegura alineación vertical */
+    flex-grow: 1; /* Ocupa espacio adicional */
+    text-align: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Espaciador */
+.spacer {
+    flex: 1;
+}
+
+/* Estilo del botón Afiliarme */
+.affiliate-button {
+    background: linear-gradient(to right, #7027e0, #ec2f4b);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.affiliate-button:hover {
+    background: linear-gradient(to right, #ec2f4b, #7027e0);
+}
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    z-index: 998; /* Debajo del menú */
+    display: none;
+}
+
+
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -430px; /* Fuera de la pantalla inicialmente */
+    width: 430px; /* Ancho en vistas grandes */
+    height: 100%;
+    background: rgba(15, 41, 91, 0.9); /* Color #0f295b con opacidad del 90% */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 999;
+    color: #ffffff; /* Texto en blanco */
+}
+
+.side-menu.open {
+    left: 0; /* Menú visible */
+}
+
+/* Estilo del texto dentro del menú */
+.side-menu nav {
+    max-width: 400px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px; /* Espaciado interno */
+}
+
+.side-menu h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffffff; /* Texto blanco */
+}
+
+.side-menu ul {
+    list-style: none; /* Elimina los puntos predeterminados */
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu ul li {
+    margin-bottom: 15px; /* Espaciado entre los elementos */
+}
+
+.side-menu ul li a {
+    display: flex; /* Hace que el icono y el texto estén alineados horizontalmente */
+    align-items: center; /* Centra verticalmente el texto y el icono */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Cambia el color del texto */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+.side-menu ul li a i {
+    color: red; /* Cambia el color de la flecha */
+    margin-right: 10px; /* Espaciado entre la flecha y el texto */
+    font-size: 14px; /* Tamaño del icono */
+}
+
+.side-menu ul li a {
+    color: #ffffff; /* Links en blanco */
+    text-decoration: none;
+}
+
+.side-menu ul li a:hover {
+    color: #d1d1d1; /* Links en gris claro al pasar el mouse */
+}
+
+/* Opcional: Estilo para el footer del menú */
+.side-menu p {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Estado activo del menú */
+
+.overlay.active {
+    display: block;
+}
+
+
+.side-menu.open {
+    left: 0; /* Mueve el menú a la pantalla */
+}
+
+.contact-info {
+    font-size: 16px;
+    color: white; /* Cambia el color del texto */
+    line-height: 1.8; /* Mejora el espaciado entre líneas */
+}
+
+.contact-info i {
+    color: #fff; /* Color blanco para los íconos */
+    margin-right: 10px; /* Espaciado entre el ícono y el texto */
+    font-size: 18px; /* Tamaño del ícono */
+}
+
+.contact-info a {
+    color: white; /* Hace el enlace de "¿Cómo llegar?" blanco */
+    text-decoration: underline; /* Agrega subrayado al enlace */
+}
+
+.contact-info a:hover {
+    color: #ff0000; /* Cambia a rojo cuando pases el mouse sobre el enlace */
+}
+
+
+
+
+
+
+
+
+
+/* Main*/
+/* Main*/
+/* Estilo principal para el contenedor del contenido */
+.content-container {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos horizontalmente */
+    align-items: stretch; /* Asegura que los elementos tengan la misma altura */
+    width: 100%;
+    height: 100vh; /* Alto completo de la ventana */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para el carrusel */
+.slideshow-container {
+    width: 50vw; /* 50% del ancho de la pantalla */
+    height: 100%; /* Alcanza toda la altura de la ventana */
+    position: relative;
+    overflow: hidden;
+}
+
+.mySlides img {
+    width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+    height: 100%; /* Las imágenes ocupan toda la altura disponible */
+    object-fit: cover; /* Mantiene la proporción y asegura que la imagen no se distorsione */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+.image-grid, .slideshow-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.image-grid img, .slideshow-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+.image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.slideshow-container {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .slideshow-container, .image-grid {
+        padding: 10px;
+    }
+}
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Estilo para la cuadrícula de imágenes */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de tamaño igual */
+    gap: 15px;
+    width: 50vw; /* 50% del ancho de la pantalla */
+    height: 70vh; /* Ajusta la altura de la cuadrícula al 70% de la ventana */
+    padding: 10px;
+}
+
+.image-link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ocupa el 100% de la altura disponible */
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+}
+
+.image-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+
+.image-link p {
+    position: absolute; /* Coloca el texto sobre la imagen */
+    bottom: 10px; /* Espaciado desde la parte inferior */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    padding: 10px;
+    text-align: center;
+    width: 100%; /* Abarca todo el ancho del contenedor */
+    box-sizing: border-box;
+}
+
+a {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .content-container {
+        flex-direction: column; /* Se apilan verticalmente en pantallas pequeñas */
+    }
+
+    .slideshow-container, .image-grid {
+        width: 100%; /* Ambos ocupan el 100% de la pantalla */
+        height: 50vh; /* Se ajusta la altura a la mitad */
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* En pantallas pequeñas, muestra 2 columnas */
+    }
+}
+
+/* Media Query para pantallas más grandes (por ejemplo, televisores) */
+@media (min-width: 1800px) {
+    .content-container {
+        flex-direction: row; /* Alineación horizontal incluso en pantallas grandes */
+    }
+
+    .slideshow-container, .image-grid {
+        width: 50vw; /* Mantiene los tamaños al 50% */
+        height: 100vh; /* Ambas secciones ocupan la altura completa */
+    }
+    .image-grid {
+        grid-template-columns: repeat(5, 1fr); /* En pantallas grandes, muestra 5 columnas */
+    }
+}
+
+/* Desktop (computadoras grandes) */
+@media (min-width: 1025px) {
+    .content-container {
+        flex-direction: row; /* En computadoras, se mantiene en fila */
+        gap: 20px;
+    }
+
+    .slideshow-container {
+        max-width: 800px; /* Carrusel de tamaño grande */
+        margin-bottom: 20px; /* Espacio debajo del carrusel */
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
+        max-width: 100%;
+    }
+
+    .image-grid div {
+        aspect-ratio: 1; /* Mantiene las imágenes cuadradas */
+    }
+}
+
+/* Tablet (tabletas entre 768px y 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .content-container {
+        flex-direction: column; /* En tabletas, los elementos se apilan */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .slideshow-container {
+        max-width: 100%; /* Carrusel ajustado a pantalla completa */
+        margin-bottom: 20px; /* Espacio debajo del carrusel */
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr 1fr; /* Dos columnas por fila */
+    }
+
+    .image-grid div {
+        aspect-ratio: 1.5; /* Ajusta la relación de aspecto */
+    }
+
+    .image-link p {
+        font-size: 12px; /* Texto más pequeño en las imágenes */
+        height: 40px; /* Aumenta la altura del texto */
+    }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        gap: 20px; /* Espaciado entre las tarjetas */
+    }
+
+    .card-large {
+        width: 90vw; /* Ajusta el tamaño de las tarjetas grandes */
+        height: auto;
+        min-height: 400px; /* Asegura que la tarjeta tenga suficiente altura */
+    }
+
+    .card-small {
+        width: 90vw; /* Ajusta el tamaño de las tarjetas pequeñas */
+        height: auto;
+    }
+
+    /* Ajuste para la cuadrícula de imágenes en dispositivos móviles */
+    .image-grid {
+        display: flex;
+        flex-direction: column; /* Alinea las imágenes en una columna */
+        gap: 10px; /* Espaciado entre las imágenes */
+        max-height: 90vh; /* Limita la altura del contenedor al 90% de la altura de la ventana */
+        overflow-y: auto; /* Activa el desplazamiento vertical cuando sea necesario */
+        padding: 0; /* Elimina el padding para mantener las dimensiones de las imágenes */
+        justify-content: flex-start; /* Alinea las imágenes al principio */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+        max-width: 800px; /* Limita el ancho máximo de la cuadrícula */
+        height: auto; /* La altura debe ajustarse automáticamente */
+    }
+
+    .image-grid div {
+        width: 100%; /* Hace que cada imagen ocupe todo el ancho disponible */
+        max-width: 800px; /* Limita el ancho máximo de cada contenedor de imagen */
+    }
+
+    .image-grid img {
+        width: 100%; /* Hace que las imágenes se ajusten al 100% del contenedor */
+        height: 550px; /* Fija la altura de las imágenes en 550px */
+        object-fit: contain; /* Mantiene la proporción de la imagen sin distorsión */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Diseño responsive HEADER */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap; /* Permite que los elementos se ajusten a nuevas líneas */
+        justify-content: center;
+    }
+
+    .menu-icon, .affiliate-button {
+        order: 1; /* Mueve estos elementos al inicio */
+    }
+
+    .anniversary, .logo {
+        order: 2; /* Mueve estos elementos después */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .affiliate-button {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+    .side-menu {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        left: -100%; /* Fuera de la pantalla inicialmente */
+    }
+
+    .side-menu.open {
+        left: 0; /* Menú visible */
+    }
+
+    .side-menu nav {
+        max-width: 100%; /* El contenido también ocupa todo el ancho */
+        padding: 20px; /* Ajusta el espaciado interno si es necesario */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px; /* Reduce el tamaño del logo */
+    }
+
+    .menu-icon-symbol {
+        font-size: 20px; /* Reduce el tamaño del ícono */
+    }
+
+    .affiliate-button {
+        font-size: 14px; /* Reduce el tamaño del texto */
+    }
+
+    .side-menu {
+        width: 100%; /* El menú ocupa el 80% del ancho */
+    }
+
+    .social-icons {
+        justify-content: center; /* Centra los íconos sociales */
+    }
+    
+}
