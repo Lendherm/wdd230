@@ -12,10 +12,25 @@ function cargarGaleria() {
     const totalImages = 9;  // Número de imágenes en la galería
 
     for (let i = 1; i <= totalImages; i++) {
+        const imgContainer = document.createElement("div");
+        imgContainer.classList.add("gallery-item");
+        
         const img = document.createElement("img");
         img.src = `https://picsum.photos/800/550?random=${i}`;
         img.alt = `Imagen ${i}`;
-        gallery.appendChild(img);
+        
+        const link = document.createElement("a");
+        link.href = "#";  // Aquí puedes poner el enlace que quieras
+        link.classList.add("gallery-link");
+        
+        const linkText = document.createElement("span");
+        linkText.classList.add("gallery-link-text");
+        linkText.innerText = "Link";
+        
+        link.appendChild(linkText);
+        imgContainer.appendChild(img);
+        imgContainer.appendChild(link);
+        gallery.appendChild(imgContainer);
     }
 }
 
@@ -23,12 +38,30 @@ function cargarCarrusel() {
     const carouselImages = document.getElementById("carousel-images");
     const totalImages = 5; // Número de imágenes en el carrusel
 
+    // Limpiar el carrusel de imágenes previas
+    carouselImages.innerHTML = '';
+
     for (let i = 1; i <= totalImages; i++) {
+        const imgContainer = document.createElement("div");
+        imgContainer.classList.add("carousel-item");
+        
         const img = document.createElement("img");
         img.src = `https://picsum.photos/800/550?random=${i}`;
         img.alt = `Carrusel Imagen ${i}`;
         img.classList.add("carousel-image");
-        carouselImages.appendChild(img);
+        
+        const link = document.createElement("a");
+        link.href = "#";  // Aquí puedes poner el enlace que quieras
+        link.classList.add("carousel-link");
+        
+        const linkText = document.createElement("span");
+        linkText.classList.add("carousel-link-text");
+        linkText.innerText = "Link";
+        
+        link.appendChild(linkText);
+        imgContainer.appendChild(img);
+        imgContainer.appendChild(link);
+        carouselImages.appendChild(imgContainer);
     }
 
     // Agregar funcionalidad de desplazamiento
@@ -55,8 +88,8 @@ function cargarCarrusel() {
 
 function actualizarCarrusel() {
     const carouselImages = document.getElementById("carousel-images");
-    const images = carouselImages.querySelectorAll(".carousel-image");
-    const width = images[0].clientWidth;
+    const images = carouselImages.querySelectorAll(".carousel-item");
+    const width = images[0].clientWidth; // Obtenemos el ancho de una imagen
 
     // Desplazamos las imágenes
     carouselImages.style.transform = `translateX(-${currentIndex * width}px)`;
@@ -67,7 +100,7 @@ function ajustarDisenoPantalla() {
     const gallery = document.getElementById('gallery');
     const mainImage = document.getElementById('main-image');
     const carouselImages = document.getElementById("carousel-images");
-    const images = carouselImages.querySelectorAll(".carousel-image");
+    const images = carouselImages.querySelectorAll(".carousel-item");
 
     if (window.innerWidth > 1024) {
         // Pantalla grande: diseño en fila
@@ -75,25 +108,14 @@ function ajustarDisenoPantalla() {
         gallery.style.width = '48%';
         mainImage.style.width = '48%';
 
-        // Aseguramos que el carrusel tenga 5 imágenes visibles
-        let galleryImages = gallery.querySelectorAll('img');
-        galleryImages.forEach((img, index) => {
-            if (index >= 9) {
-                img.style.display = 'none';  // Ocultar imágenes adicionales
-            } else {
-                img.style.display = 'block'; // Mostrar imágenes de la galería
-            }
-        });
+        // Ajustamos el tamaño del carrusel
+        let width = carouselImages.offsetWidth;
+        let totalImages = images.length;
+        carouselImages.style.width = `${totalImages * width}px`;
     } else {
         // Pantalla pequeña: diseño en columna
         container.style.flexDirection = 'column';
         gallery.style.width = '100%';
         mainImage.style.width = '100%';
-
-        // Mostrar todas las imágenes de la galería
-        let galleryImages = gallery.querySelectorAll('img');
-        galleryImages.forEach((img) => {
-            img.style.display = 'block';
-        });
     }
 }

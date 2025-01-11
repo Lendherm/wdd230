@@ -82,64 +82,25 @@
             </ul>
         </nav>
     </div>
-
-    <main class="content-container">
-        <!-- Carrusel -->
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <div class="image-link">
-                    <img src="https://picsum.photos/800/550?random=1" style="width:100%" alt="150 AÑOS">
-                    <p>150 AÑOS AL SERVICIO DE MÉXICO</p>
+    <main>
+        <div id="container">
+            <div id="main-image" class="main-image">
+                <!-- Carrusel de imágenes con botones -->
+                <div id="carousel">
+                    <button id="prev" class="carousel-btn">❮</button>
+                    <div id="carousel-images" class="carousel-images">
+                        <!-- Las imágenes del carrusel se agregarán dinámicamente -->
+                    </div>
+                    <button id="next" class="carousel-btn">❯</button>
                 </div>
             </div>
-            <div class="mySlides fade">
-                <div class="image-link">
-                    <img src="https://picsum.photos/800/550?random=2" style="width:100%">
-                    <p>Otra imagen en el slideshow</p>
-                </div>
+            <div id="gallery" class="gallery">
+                <!-- Las imágenes de la galería se agregarán dinámicamente -->
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+    </main>
 
-        <!-- Cuadrícula de Imágenes -->
-        <div class="image-grid">
-            <a href="#" class="image-link">
-                <img src="https://picsum.photos/800/550?random=3" alt="Networking">
-                <p>Networking</p>
-            </a>
-            <a href="#" class="image-link">
-                <img src="https://picsum.photos/800/550?random=4" alt="Capacitación">
-                <p>Capacitación</p>
-            </a>
-            <a href="#" class="image-link">
-                <img src="https://picsum.photos/800/550?random=5" alt="SIEM">
-                <p>Sistema Empresarial</p>
-            </a>
-            <a href="#" class="image-link">
-                <img src="https://picsum.photos/800/550?random=6" alt="Servicios Legales">
-                <p>Servicios Legales</p>
-            </a>
-            <a href="#" class="image-link">
-                <img src="https://picsum.photos/800/550?random=7" alt="Agenda">
-                <p>Agenda Empresarial</p>
-            </a>
-            <a href="#" class="image-link">
-                <img src="https://picsum.photos/800/550?random=8" alt="Turismo">
-                <p>Servicios Turísticos</p>
-            </a>
-            <a href="#" class="image-link">
-                <img src="https://picsum.photos/800/550?random=9" alt="Comercio">
-                <p>Comercio Internacional</p>
-            </a>
-            <a href="#" class="image-link">
-                <img src="https://picsum.photos/800/550?random=10" alt="Revista">
-                <p>Revista Digital</p>
-            </a>
-        </div>
-
-
-        <script src="scripts/chamber-site-plan.js"></script>
+    <script src="scripts/chamber-site-plan.js"></script>
 </body>
 
 </html>

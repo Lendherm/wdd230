@@ -234,260 +234,100 @@ body, html {
 
 
 
-
-
-
-/* Main*/
-/* Main*/
-/* Estilo principal para el contenedor del contenido */
-.content-container {
-    display: flex;
-    justify-content: space-between; /* Alinea los elementos horizontalmente */
-    align-items: stretch; /* Asegura que los elementos tengan la misma altura */
-    width: 100%;
-    height: 100vh; /* Alto completo de la ventana */
-    padding: 0;
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-/* Estilo para el carrusel */
-.slideshow-container {
-    width: 50vw; /* 50% del ancho de la pantalla */
-    height: 100%; /* Alcanza toda la altura de la ventana */
-    position: relative;
-    overflow: hidden;
-}
-
-.mySlides img {
-    width: 100%; /* Las imágenes ocupan todo el ancho disponible */
-    height: 100%; /* Las imágenes ocupan toda la altura disponible */
-    object-fit: cover; /* Mantiene la proporción y asegura que la imagen no se distorsione */
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: white;
-    padding: 16px;
-    background-color: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    z-index: 100;
-}
-
-
-.image-grid, .slideshow-container {
-    padding: 20px;
+/* Contenedor principal */
+#container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between; /* Asegura que la galería y el carrusel estén separados */
+    gap: 20px;
+    padding: 20px;
     box-sizing: border-box;
-    max-width: 100%;
+    width: 100%;
 }
 
-.image-grid img, .slideshow-container img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    border-radius: 5px;
+/* Carrusel y galería */
+.gallery, .main-image {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Ambas ocupan casi el mismo ancho en pantallas grandes */
 }
 
-.image-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+/* Estilos para las imágenes en la galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
-.slideshow-container {
+.gallery img {
     width: 100%;
-    max-width: 800px;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Carrusel de imágenes */
+#carousel {
     position: relative;
-}
-
-@media (max-width: 600px) {
-    .slideshow-container, .image-grid {
-        padding: 10px;
-    }
-}
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-/* Estilo para la cuadrícula de imágenes */
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de tamaño igual */
-    gap: 15px;
-    width: 50vw; /* 50% del ancho de la pantalla */
-    height: 70vh; /* Ajusta la altura de la cuadrícula al 70% de la ventana */
-    padding: 10px;
-}
-
-.image-link {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Ocupa el 100% de la altura disponible */
+    width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
+    height: 100%; /* Asegura que ocupe todo el espacio disponible en su contenedor */
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
 }
 
-.image-link img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
+#carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Asegura que las imágenes del carrusel llenen el contenedor */
 }
 
+.carousel-image {
+    flex-shrink: 0; /* Previene que las imágenes se encojan */
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del carrusel */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px;
+}
 
-.image-link p {
-    position: absolute; /* Coloca el texto sobre la imagen */
-    bottom: 10px; /* Espaciado desde la parte inferior */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    border: none;
     padding: 10px;
-    text-align: center;
-    width: 100%; /* Abarca todo el ancho del contenedor */
-    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateY(-50%);
 }
 
-a {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
+#prev {
+    left: 0;
 }
 
-
-/* Media Queries para pantallas más pequeñas */
-@media (max-width: 1200px) {
-    .content-container {
-        flex-direction: column; /* Se apilan verticalmente en pantallas pequeñas */
-    }
-
-    .slideshow-container, .image-grid {
-        width: 100%; /* Ambos ocupan el 100% de la pantalla */
-        height: 50vh; /* Se ajusta la altura a la mitad */
-    }
-
-    .image-grid {
-        grid-template-columns: repeat(2, 1fr); /* En pantallas pequeñas, muestra 2 columnas */
-    }
+#next {
+    right: 0;
 }
 
-/* Media Query para pantallas más grandes (por ejemplo, televisores) */
-@media (min-width: 1800px) {
-    .content-container {
-        flex-direction: row; /* Alineación horizontal incluso en pantallas grandes */
-    }
-
-    .slideshow-container, .image-grid {
-        width: 50vw; /* Mantiene los tamaños al 50% */
-        height: 100vh; /* Ambas secciones ocupan la altura completa */
-    }
-    .image-grid {
-        grid-template-columns: repeat(5, 1fr); /* En pantallas grandes, muestra 5 columnas */
-    }
-}
-
-/* Desktop (computadoras grandes) */
-@media (min-width: 1025px) {
-    .content-container {
-        flex-direction: row; /* En computadoras, se mantiene en fila */
-        gap: 20px;
-    }
-
-    .slideshow-container {
-        max-width: 800px; /* Carrusel de tamaño grande */
-        margin-bottom: 20px; /* Espacio debajo del carrusel */
-    }
-
-    .image-grid {
-        grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
-        max-width: 100%;
-    }
-
-    .image-grid div {
-        aspect-ratio: 1; /* Mantiene las imágenes cuadradas */
-    }
-}
-
-/* Tablet (tabletas entre 768px y 1024px) */
-@media (max-width: 1024px) and (min-width: 768px) {
-    .content-container {
-        flex-direction: column; /* En tabletas, los elementos se apilan */
+/* Para pantallas pequeñas (apilar el carrusel y la galería) */
+@media (max-width: 1024px) {
+    #container {
+        flex-direction: column; /* Cambiar de fila a columna */
         align-items: center;
-        gap: 20px;
     }
 
-    .slideshow-container {
-        max-width: 100%; /* Carrusel ajustado a pantalla completa */
-        margin-bottom: 20px; /* Espacio debajo del carrusel */
+    .gallery, .main-image {
+        width: 100%; /* Ambos ocupan todo el ancho */
     }
 
-    .image-grid {
-        grid-template-columns: 1fr 1fr; /* Dos columnas por fila */
-    }
-
-    .image-grid div {
-        aspect-ratio: 1.5; /* Ajusta la relación de aspecto */
-    }
-
-    .image-link p {
-        font-size: 12px; /* Texto más pequeño en las imágenes */
-        height: 40px; /* Aumenta la altura del texto */
+    .gallery {
+        display: block;
     }
 }
-
-/* Media query para dispositivos móviles */
-@media (max-width: 480px) {
-    .container {
-        flex-direction: column;
-        gap: 20px; /* Espaciado entre las tarjetas */
-    }
-
-    .card-large {
-        width: 90vw; /* Ajusta el tamaño de las tarjetas grandes */
-        height: auto;
-        min-height: 400px; /* Asegura que la tarjeta tenga suficiente altura */
-    }
-
-    .card-small {
-        width: 90vw; /* Ajusta el tamaño de las tarjetas pequeñas */
-        height: auto;
-    }
-
-    /* Ajuste para la cuadrícula de imágenes en dispositivos móviles */
-    .image-grid {
-        display: flex;
-        flex-direction: column; /* Alinea las imágenes en una columna */
-        gap: 10px; /* Espaciado entre las imágenes */
-        max-height: 90vh; /* Limita la altura del contenedor al 90% de la altura de la ventana */
-        overflow-y: auto; /* Activa el desplazamiento vertical cuando sea necesario */
-        padding: 0; /* Elimina el padding para mantener las dimensiones de las imágenes */
-        justify-content: flex-start; /* Alinea las imágenes al principio */
-        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-        max-width: 800px; /* Limita el ancho máximo de la cuadrícula */
-        height: auto; /* La altura debe ajustarse automáticamente */
-    }
-
-    .image-grid div {
-        width: 100%; /* Hace que cada imagen ocupe todo el ancho disponible */
-        max-width: 800px; /* Limita el ancho máximo de cada contenedor de imagen */
-    }
-
-    .image-grid img {
-        width: 100%; /* Hace que las imágenes se ajusten al 100% del contenedor */
-        height: 550px; /* Fija la altura de las imágenes en 550px */
-        object-fit: contain; /* Mantiene la proporción de la imagen sin distorsión */
-    }
-}
-
-
 
 
 
