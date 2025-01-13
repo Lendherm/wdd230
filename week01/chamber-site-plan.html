@@ -1,113 +1,294 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header Diseño</title>
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/chamber-site-plan.css">
+    <title>Chamber Site Plan</title>
+    <link rel="stylesheet" href="./styles/chamber-site-plan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+
+    <!-- Site Header -->
     <header class="site-header">
         <div class="container">
-            <!-- Ícono del menú hamburguesa -->
-            <div class="menu-icon" id="menu-toggle">
+            <div class="menu-icon">
                 <span class="menu-icon-symbol">&#9776;</span>
-                <span class="menu-icon-text">Menú</span>
+                <span class="menu-icon-text">Menu</span>
             </div>
-
-            <!-- Aniversario -->
-            <div class="anniversary">
-                <div class="anniversary-title">Cumplimos</div>
-                <div class="anniversary-year">150 años</div>
-                <div class="anniversary-text">de unir, servir y representar</div>
-            </div>
-
-            <!-- Logo -->
             <div class="logo">
-                <img src="ruta/a/tu/logo.png" alt="Logo Cámara de Comercio">
-                <!-- Asegúrate de poner el link correcto de tu logo -->
+                <img src="logo-chamber.png" alt="Chamber Logo">
             </div>
-
-            <!-- Botón "Afiliarme" -->
-            <a href="#" class="affiliate-button">QUIERO AFILIARME</a>
+            <a href="#" class="affiliate-button">Join</a>
+        </div>
+        <div class="anniversary">
+            <p class="anniversary-title">Anniversary</p>
+            <p class="anniversary-year">20 Years</p>
+            <p class="anniversary-text">Uniting the community</p>
         </div>
     </header>
 
-    <!-- Menú lateral -->
-    <div class="overlay" id="overlay"></div>
-    <div class="side-menu" id="side-menu">
-        <nav>
-            <h2>Menú Principal</h2>
-            <ul>
-                <li><a href="/week01/chamber-site-plan.html"><i class="fas fa-arrow-right"></i> Inicio</a></li>
-                <li><a href="#"><i class="fas fa-arrow-right"></i> Servicios</a></li>
-                <li><a href="#"><i class="fas fa-arrow-right"></i> Representatividad</a></li>
-                <li><a href="#"><i class="fas fa-arrow-right"></i> Eventos</a></li>
-                <li><a href="#"><i class="fas fa-arrow-right"></i> ¿Quiénes Somos?</a></li>
-                <li><a href="#"><i class="fas fa-arrow-right"></i> Directorio de Consejo</a></li>
-                <li><a href="#"><i class="fas fa-arrow-right"></i> Prensa</a></li>
-                <li><a href="#"><i class="fas fa-arrow-right"></i> Blog</a></li>
-                <li><a href="#"><i class="fas fa-arrow-right"></i> Contacto</a></li>
-            </ul>
+    <!-- Three-Column Layout -->
+    <main class="three-column-layout">
 
-            <div class="contact-info">
-                <!-- Dirección con icono de mapa -->
-                <p>
-                    <i class="fas fa-map-marker-alt"></i> Paseo de la Reforma 42 Colonia Centro, Alcaldía Cuauhtémoc,
-                    C.P. 06040, Ciudad de México. |
-                    <a href="#" style="color: white; text-decoration: underline;">¿Cómo llegar?</a>
-                </p>
+        <!-- Information Column -->
+        <section class="site-info">
+            <div>
+                <section class="site-purpose">
+                    <h2>Site Purpose</h2>
+                    <p>The purpose of this site is:</p>
+                    <ul>
+                        <li>To provide information about the Chamber of Commerce services.</li>
+                        <li>To encourage membership and participation in business events.</li>
+                    </ul>
+                </section>
 
-                <!-- Correo con icono de email -->
-                <p><i class="fas fa-envelope"></i> primercontacto@ccmexico.com.mx</p>
+                <section class="user-scenarios">
+                    <h2>User Scenarios</h2>
+                    <p>Key questions site visitors might have:</p>
+                    <ul>
+                        <li>How can I join the Chamber of Commerce?</li>
+                        <li>What upcoming business events are scheduled?</li>
+                        <li>What are the benefits of being a Chamber member?</li>
+                    </ul>
+                </section>
 
-                <!-- WhatsApp con icono -->
-                <p><i class="fab fa-whatsapp"></i> +52 55 7196 6356</p>
+                <section class="color-schema color-scheme-section">
+                    <h2>Color Scheme</h2>
+                    <p>Colors used:</p>
+                    <ul>
+                        <li>
+                            <span class="color-swatch dark-blue"></span>
+                            Dark Blue (#002a5c) for the header and footer.
+                        </li>
+                        <li>
+                            <span class="color-swatch gold"></span>
+                            Gold (#ffcc00) to highlight the join button.
+                        </li>
+                    </ul>
+                </section>
 
-                <!-- Teléfono con icono -->
-                <p><i class="fas fa-phone-alt"></i> 55 36-85-22-69</p>
+                <section class="typography">
+                    <h2>Typography</h2>
+                    <p>The 'Poppins' font is used for general site content, while 'Roboto' is applied to headings for a
+                        modern and professional style.</p>
+                </section>
+
+                <section class="design-description">
+                    <h2>Design Description</h2>
+                    <p>This webpage design features a clear and organized structure to facilitate user navigation. Below
+                        are its main characteristics:</p>
+                    <h3>Header:</h3>
+                    <p>The header includes a dropdown menu with key options, a central logo, and a prominent "Join"
+                        button. Additionally, an anniversary message highlighting years of service is displayed.</p>
+                    <h3>Main Body:</h3>
+                    <ul>
+                        <li>An image carousel provides visual information about services or events.</li>
+                        <li>A section of links arranged as a directory with images and descriptions highlights various
+                            areas of interest.</li>
+                        <li>Explanatory text describes the use of CSS and the presentation of visual elements.</li>
+                    </ul>
+                    <h3>Footer:</h3>
+                    <p>Includes copyright information and the date of the last update. The responsive design ensures
+                        proper viewing on mobile devices.</p>
+                    <p>The design combines a corporate blue background with white accents for a professional appearance,
+                        aligned with the Chamber of Commerce's visual identity.</p>
+                </section>
             </div>
+        </section>
 
-            <ul class="social-icons">
-                <li><a href="#" class="fab fa-facebook"></a></li>
-                <li><a href="#" class="fab fa-instagram"></a></li>
-                <li><a href="#" class="fab fa-twitter"></a></li>
-                <li><a href="#" class="fab fa-youtube"></a></li>
-                <li><a href="#" class="fab fa-linkedin"></a></li>
-            </ul>
-        </nav>
-    </div>
+        <!-- CSS Column -->
+        <section class="css-description">
+            <h2>CSS Used on the Page</h2>
+            <p>This is the CSS being used on this page:</p>
+            <pre><code>
+                /* Reset básico */
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    overflow-x: hidden;
+                    font-family: 'Poppins', sans-serif;
+                }
+                
+                /* Estilo del header */
+                .site-header {
+                    background-color: #002a5c; /* Azul oscuro */
+                    color: white;
+                    padding: 20px 0; /* Ajuste del espaciado */
+                    width: 100%; /* Abarca todo el ancho de la pantalla */
+                }
+                
+                .container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    max-width: 1400px; /* Ancho máximo del contenido */
+                    margin: 0 auto; /* Centra el contenido */
+                    padding: 0 20px; /* Espaciado lateral */
+                    width: 100%;
+                }
+                
+                /* Estilo del menú */
+                .menu-icon {
+                    display: flex;
+                    align-items: center;
+                    font-size: 18px;
+                    color: white;
+                    cursor: pointer;
+                }
+                
+                .menu-icon-symbol {
+                    font-size: 24px;
+                    margin-right: 5px;
+                }
+                
+                .menu-icon-text {
+                    font-size: 16px;
+                }
+                
+                /* Estilo del logo */
+                .logo {
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                }
+                
+                .logo img {
+                    height: 50px;
+                    width: auto;
+                }
+                
+                /* Estilo del aniversario */
+                .anniversary {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center; /* Centrado del texto */
+                    color: gold;
+                    line-height: 1.2;
+                }
+                
+                .anniversary-title {
+                    font-size: 14px;
+                }
+                
+                .anniversary-year {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                
+                .anniversary-text {
+                    font-size: 12px;
+                }
+                
+                /* Estilo del botón Afiliarme */
+                .affiliate-button {
+                    background: linear-gradient(to right, #7027e0, #ec2f4b);
+                    color: white;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 16px;
+                    transition: background 0.3s;
+                }
+                
+                .affiliate-button:hover {
+                    background: linear-gradient(to right, #ec2f4b, #7027e0);
+                }
+                
+                /* Diseño general en tres columnas */
+                .three-column-layout {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 20px;
+                    margin: 20px;
+                }
+                
+                section {
+                    background-color: #fff;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                }
+                
+                /* Estilo de muestra de colores */
+                .color-swatch {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    border: 1px solid #ccc;
+                }
+                
+                .color-swatch.dark-blue {
+                    background-color: #002a5c;
+                }
+                
+                .color-swatch.gold {
+                    background-color: #ffcc00;
+                }
+                
+                /* Tipografía */
+                h1, h2, h3, h4, h5, h6 {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: bold;
+                }
+                
+                /* Código CSS en preformat */
+                pre code {
+                    background-color: #f4f4f4;
+                    padding: 15px;
+                    display: block;
+                    overflow-x: auto;
+                    border-radius: 5px;
+                    white-space: pre-wrap;
+                }
+                
+                /* Diseño responsivo */
+                @media (max-width: 768px) {
+                    .three-column-layout {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                
+                /* Estilo del footer */
+                footer {
+                    margin-top: 30px;
+                    padding: 10px;
+                    background-color: #002a5c; /* Mismo color que el header */
+                    color: white;
+                    text-align: center;
+                }
+                
+                footer p {
+                    margin: 5px 0;
+                }
+                            </code></pre>
+        </section>
 
-    <main>
-        <div id="container">
-            <div id="main-image" class="main-image">
-                <!-- Carrusel de imágenes con botones -->
-                <div id="carousel">
-                    <button id="prev" class="carousel-btn">❮</button>
-                    <div id="carousel-images" class="carousel-images">
-                        <!-- Las imágenes del carrusel se agregarán dinámicamente -->
-                    </div>
-                    <button id="next" class="carousel-btn">❯</button>
-                </div>
-            </div>
-            <div id="gallery" class="gallery">
-                <!-- Las imágenes de la galería se agregarán dinámicamente -->
-            </div>
-        </div>
+        <!-- Design Preview -->
+        <section class="visual-preview">
+            <h2>Design Preview</h2>
+            <img src="./photos/Plan.jpg" alt="Design preview of the site">
+        </section>
+
     </main>
 
-    <!-- Corregir la etiqueta footer -->
+    <!-- Footer -->
     <footer>
         <p>&copy; <span id="currentYear"></span> Luis Emilio Nathanael De la rosa Meneses, Mexico</p>
         <p id="lastModified"></p>
     </footer>
 
     <script src="scripts/chamber-site-plan.js"></script>
+    <script src="scripts/getDates.js"></script>
+
+
 </body>
 
 </html>
