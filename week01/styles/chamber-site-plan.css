@@ -15,6 +15,15 @@ body, html {
     width: 100%; /* Abarca todo el ancho de la pantalla */
 }
 
+.container_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0 20px; /* Espaciado lateral */
+    width: 100%;
+}
 .container {
     display: flex;
     justify-content: space-between;
@@ -57,9 +66,7 @@ body, html {
 
 /* Estilo del aniversario */
 .anniversary {
-    display: flex;
-    flex-direction: column;
-    text-align: center; /* Centrado del texto */
+    text-align: center;
     color: gold;
     line-height: 1.2;
 }
@@ -76,7 +83,6 @@ body, html {
 .anniversary-text {
     font-size: 12px;
 }
-
 /* Estilo del botón Afiliarme */
 .affiliate-button {
     background: linear-gradient(to right, #7027e0, #ec2f4b);
@@ -180,7 +186,10 @@ footer p {
     .container {
         flex-direction: column;
     }
-
+    .container_header{
+        flex-direction: column; /* Cambiar de fila a columna */
+        align-items: center;
+    }
     .left-column, .center-column, .right-column {
         flex: 1;
         width: 100%;
