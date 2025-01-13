@@ -20,7 +20,7 @@
                 <span class="menu-icon-text">Menu</span>
             </div>
             <div class="logo">
-                <img src="logo-chamber.png" alt="Chamber Logo">
+                <img src="https://via.placeholder.com/150" alt="Chamber Logo">
             </div>
             <a href="#" class="affiliate-button">Join</a>
         </div>
@@ -30,22 +30,27 @@
             <p class="anniversary-text">Uniting the community</p>
         </div>
     </header>
-
     <!-- Three-Column Layout -->
-    <main class="three-column-layout">
-
-        <!-- Information Column -->
-        <section class="site-info">
-            <div>
-                <section class="site-purpose">
-                    <h2>Site Purpose</h2>
-                    <p>The purpose of this site is:</p>
-                    <ul>
-                        <li>To provide information about the Chamber of Commerce services.</li>
-                        <li>To encourage membership and participation in business events.</li>
-                    </ul>
+    <main>
+        <div class="container">
+            <!-- Columna Izquierda -->
+            <div class="left-column">
+                <!-- About Our Chamber -->
+                <section class="site-info">
+                    <h2>About Our Chamber</h2>
+                    <div>
+                        <section class="site-purpose">
+                            <h3>Site Purpose</h3>
+                            <p>The purpose of this site is:</p>
+                            <ul>
+                                <li>To provide information about the Chamber of Commerce services.</li>
+                                <li>To encourage membership and participation in business events.</li>
+                            </ul>
+                        </section>
+                    </div>
                 </section>
 
+                <!-- User Scenarios -->
                 <section class="user-scenarios">
                     <h2>User Scenarios</h2>
                     <p>Key questions site visitors might have:</p>
@@ -56,6 +61,7 @@
                     </ul>
                 </section>
 
+                <!-- Color Scheme -->
                 <section class="color-schema color-scheme-section">
                     <h2>Color Scheme</h2>
                     <p>Colors used:</p>
@@ -71,12 +77,14 @@
                     </ul>
                 </section>
 
+                <!-- Typography -->
                 <section class="typography">
                     <h2>Typography</h2>
                     <p>The 'Poppins' font is used for general site content, while 'Roboto' is applied to headings for a
                         modern and professional style.</p>
                 </section>
 
+                <!-- Design Description -->
                 <section class="design-description">
                     <h2>Design Description</h2>
                     <p>This webpage design features a clear and organized structure to facilitate user navigation. Below
@@ -98,185 +106,215 @@
                         aligned with the Chamber of Commerce's visual identity.</p>
                 </section>
             </div>
-        </section>
 
-        <!-- CSS Column -->
-        <section class="css-description">
-            <h2>CSS Used on the Page</h2>
-            <p>This is the CSS being used on this page:</p>
-            <pre><code>
-                /* Reset básico */
-                body, html {
-                    margin: 0;
-                    padding: 0;
-                    width: 100%;
-                    overflow-x: hidden;
-                    font-family: 'Poppins', sans-serif;
-                }
-                
-                /* Estilo del header */
-                .site-header {
-                    background-color: #002a5c; /* Azul oscuro */
-                    color: white;
-                    padding: 20px 0; /* Ajuste del espaciado */
-                    width: 100%; /* Abarca todo el ancho de la pantalla */
-                }
-                
-                .container {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    max-width: 1400px; /* Ancho máximo del contenido */
-                    margin: 0 auto; /* Centra el contenido */
-                    padding: 0 20px; /* Espaciado lateral */
-                    width: 100%;
-                }
-                
-                /* Estilo del menú */
-                .menu-icon {
-                    display: flex;
-                    align-items: center;
-                    font-size: 18px;
-                    color: white;
-                    cursor: pointer;
-                }
-                
-                .menu-icon-symbol {
-                    font-size: 24px;
-                    margin-right: 5px;
-                }
-                
-                .menu-icon-text {
-                    font-size: 16px;
-                }
-                
-                /* Estilo del logo */
-                .logo {
-                    display: flex;
-                    align-items: center;
-                    text-align: center;
-                }
-                
-                .logo img {
-                    height: 50px;
-                    width: auto;
-                }
-                
-                /* Estilo del aniversario */
-                .anniversary {
-                    display: flex;
-                    flex-direction: column;
-                    text-align: center; /* Centrado del texto */
-                    color: gold;
-                    line-height: 1.2;
-                }
-                
-                .anniversary-title {
-                    font-size: 14px;
-                }
-                
-                .anniversary-year {
-                    font-size: 18px;
-                    font-weight: bold;
-                }
-                
-                .anniversary-text {
-                    font-size: 12px;
-                }
-                
-                /* Estilo del botón Afiliarme */
-                .affiliate-button {
-                    background: linear-gradient(to right, #7027e0, #ec2f4b);
-                    color: white;
-                    padding: 10px 20px;
-                    border-radius: 20px;
-                    text-decoration: none;
-                    font-weight: bold;
-                    font-size: 16px;
-                    transition: background 0.3s;
-                }
-                
-                .affiliate-button:hover {
-                    background: linear-gradient(to right, #ec2f4b, #7027e0);
-                }
-                
-                /* Diseño general en tres columnas */
-                .three-column-layout {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    gap: 20px;
-                    margin: 20px;
-                }
-                
-                section {
-                    background-color: #fff;
-                    padding: 20px;
-                    border-radius: 8px;
-                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                }
-                
-                /* Estilo de muestra de colores */
-                .color-swatch {
-                    display: inline-block;
-                    width: 20px;
-                    height: 20px;
-                    margin-right: 10px;
-                    border-radius: 50%;
-                    border: 1px solid #ccc;
-                }
-                
-                .color-swatch.dark-blue {
-                    background-color: #002a5c;
-                }
-                
-                .color-swatch.gold {
-                    background-color: #ffcc00;
-                }
-                
-                /* Tipografía */
-                h1, h2, h3, h4, h5, h6 {
-                    font-family: 'Roboto', sans-serif;
-                    font-weight: bold;
-                }
-                
-                /* Código CSS en preformat */
-                pre code {
-                    background-color: #f4f4f4;
-                    padding: 15px;
-                    display: block;
-                    overflow-x: auto;
-                    border-radius: 5px;
-                    white-space: pre-wrap;
-                }
-                
-                /* Diseño responsivo */
-                @media (max-width: 768px) {
-                    .three-column-layout {
-                        grid-template-columns: 1fr;
-                    }
-                }
-                
-                /* Estilo del footer */
-                footer {
-                    margin-top: 30px;
-                    padding: 10px;
-                    background-color: #002a5c; /* Mismo color que el header */
-                    color: white;
-                    text-align: center;
-                }
-                
-                footer p {
-                    margin: 5px 0;
-                }
-                            </code></pre>
-        </section>
+            <!-- Columna Central -->
+            <div class="center-column">
+                <!-- CSS Used on the Page -->
+                <section class="css-used">
+                    <h2>CSS Used on the Page</h2>
+                    <pre><code>
+                        /* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
 
-        <!-- Design Preview -->
-        <section class="visual-preview">
-            <h2>Design Preview</h2>
-            <img src="./photos/Plan.jpg" alt="Design preview of the site">
-        </section>
+/* Estilo del header */
+.site-header {
+    background-color: #002a5c; /* Azul oscuro */
+    color: white;
+    padding: 20px 0; /* Ajuste del espaciado */
+    width: 100%; /* Abarca todo el ancho de la pantalla */
+}
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1400px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0 20px; /* Espaciado lateral */
+    width: 100%;
+}
+
+/* Estilo del menú */
+.menu-icon {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-icon-symbol {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.menu-icon-text {
+    font-size: 16px;
+}
+
+/* Estilo del logo */
+.logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Estilo del aniversario */
+.anniversary {
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Centrado del texto */
+    color: gold;
+    line-height: 1.2;
+}
+
+.anniversary-title {
+    font-size: 14px;
+}
+
+.anniversary-year {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.anniversary-text {
+    font-size: 12px;
+}
+
+/* Estilo del botón Afiliarme */
+.affiliate-button {
+    background: linear-gradient(to right, #7027e0, #ec2f4b);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.affiliate-button:hover {
+    background: linear-gradient(to right, #ec2f4b, #7027e0);
+}
+
+/* Diseño en tres columnas (ajustado a tus indicaciones) */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Columna izquierda */
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Columna central */
+.center-column {
+    flex: 1;
+}
+
+/* Columna derecha */
+.right-column {
+    flex: 2;
+}
+
+/* Estilo para las secciones */
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de muestra de colores */
+.color-swatch {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.color-swatch.dark-blue {
+    background-color: #002a5c;
+}
+
+.color-swatch.gold {
+    background-color: #ffcc00;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* Código CSS en preformat */
+pre code {
+    background-color: #f4f4f4;
+    padding: 15px;
+    display: block;
+    overflow-x: auto;
+    border-radius: 5px;
+    white-space: pre-wrap;
+}
+
+/* Estilo del footer */
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #002a5c; /* Mismo color que el header */
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column, .center-column, .right-column {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+                    </code></pre>
+                </section>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="right-column">
+                <!-- Design Preview -->
+                <section class="design-preview">
+                    <h2>Design Preview</h2>
+                    <img src="./photos/Plan.jpg" alt="">
+                </section>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -286,7 +324,7 @@
     </footer>
 
     <script src="scripts/chamber-site-plan.js"></script>
-    <script src="scripts/getDates.js"></script>
+
 
 
 </body>
