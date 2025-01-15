@@ -1,24 +1,21 @@
-/* larger.css */
-
-/* Large Screen Styles (Media Query) */
+/* Media Queries for Larger Screens */
 @media (min-width: 768px) {
     .main-content {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
-        gap: 20px; /* Espaciado entre las columnas */
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
 
     .card.learning-activities,
     .card.information {
-        grid-column: span 1; /* Cada tarjeta ocupa una sola columna */
+        grid-column: span 1;
     }
 
-    /* Estilo de la navegación para pantallas grandes */
     nav ul {
         justify-content: center;
     }
 
     nav ul li a {
-        font-size: 2em; /* Aumentar el tamaño de los enlaces en pantallas grandes */
+        font-size: 2em;
     }
 }
