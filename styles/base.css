@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none; 
 }
 
 /* Body Styles */
@@ -137,6 +138,7 @@ main {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
+    
 }
 
 /* Submenú estilo */
@@ -165,6 +167,8 @@ main {
 .submenu-toggle:hover {
     background-color: #f0a500;
 }
+
+
 
 /* Footer Styles */
 footer {
