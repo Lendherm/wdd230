@@ -17,6 +17,64 @@ body {
     padding: 20px;
 }
 
+/* Estilos generales para el modo claro y oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+main.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#mode {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Otras personalizaciones para el modo oscuro */
+body.dark-mode #mode {
+    color: #f0a500;
+}
+
+/* Estilos para la tarjeta (card) en modo oscuro */
+body.dark-mode .card {
+    background-color: #444;  /* Fondo más oscuro para la tarjeta */
+    color: #fff;             /* Color de texto blanco en modo oscuro */
+}
+
+body.dark-mode #visits {
+    color: #ddd; /* Cambiar el color del texto para las visitas en modo oscuro */
+}
+/* Estilo para los enlaces del menú en modo oscuro */
+body.dark-mode nav ul li a {
+    color: #f0a500; /* Color amarillo para los enlaces en modo oscuro */
+}
+
+/* Estilo para el enlace activo en modo oscuro */
+body.dark-mode nav ul li a.active {
+    background-color: #f0a500; /* Fondo amarillo para el enlace activo */
+    color: black;  /* Color de texto negro para el enlace activo */
+}
+
+/* Efecto al pasar el ratón sobre los enlaces en modo oscuro */
+body.dark-mode nav ul li a:hover {
+    background-color: #f0a500; /* Fondo amarillo cuando el ratón pasa sobre el enlace */
+    color: black; /* Color de texto negro al hacer hover */
+}
+
+body.dark-mode a {
+    color: white;
+}
+
+body.dark-mode a:hover {
+    color: black;
+}
+
 /* Header Styles */
 header {
     display: flex;
@@ -138,7 +196,6 @@ main {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-    
 }
 
 /* Submenú estilo */
@@ -167,8 +224,6 @@ main {
 .submenu-toggle:hover {
     background-color: #f0a500;
 }
-
-
 
 /* Footer Styles */
 footer {
