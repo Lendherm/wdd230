@@ -1,0 +1,198 @@
+/* Estilo del header */
+.site-header {
+    background-color: #002a5c; /* Azul oscuro */
+    color: white;
+    padding: 0%;
+    width: 100%; /* Abarca todo el ancho de la pantalla */
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Espacio entre los divs */
+    max-width: 1400px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0; /* Espaciado lateral */
+    width: 100%;
+}
+
+/* Estilo del menú */
+.header-menu-icon {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.header-menu-icon-symbol {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.header-menu-icon-text {
+    font-size: 16px;
+}
+
+/* Estilo del aniversario */
+.header-anniversary {
+    text-align: center;
+    color: gold;
+    line-height: 1.2;
+}
+
+.header-anniversary-title {
+    font-size: 14px;
+}
+
+.header-anniversary-year {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header-anniversary-text {
+    font-size: 12px;
+}
+
+/* Estilo del logo */
+.header-logo {
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center; /* Asegura alineación vertical */
+    flex-grow: 1; /* Ocupa espacio adicional */
+    text-align: center;
+}
+
+.header-logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Estilo del botón Afiliarme */
+.header-affiliate-button {
+    background: linear-gradient(to right, #7027e0, #ec2f4b);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.header-affiliate-button:hover {
+    background: linear-gradient(to right, #ec2f4b, #7027e0);
+}
+
+/* Menú lateral */
+.header-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    z-index: 998; /* Debajo del menú */
+    display: none;
+}
+
+.header-side-menu {
+    position: fixed;
+    top: 0;
+    left: -430px; /* Fuera de la pantalla inicialmente */
+    width: 430px; /* Ancho en vistas grandes */
+    height: 100%;
+    background: rgba(15, 41, 91, 0.9); /* Color #0f295b con opacidad del 90% */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 999;
+    color: #ffffff; /* Texto en blanco */
+}
+
+.header-side-menu.open {
+    left: 0; /* Menú visible */
+}
+
+.header-side-menu nav {
+    max-width: 400px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px; /* Espaciado interno */
+}
+
+.header-side-menu h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffffff; /* Texto blanco */
+}
+
+.header-side-menu ul {
+    list-style: none; /* Elimina los puntos predeterminados */
+    padding: 0;
+    margin: 0;
+}
+
+.header-side-menu ul li {
+    margin-bottom: 15px; /* Espaciado entre los elementos */
+}
+
+.header-side-menu ul li a {
+    display: flex; /* Hace que el icono y el texto estén alineados horizontalmente */
+    align-items: center; /* Centra verticalmente el texto y el icono */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Cambia el color del texto */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+.header-side-menu ul li a i {
+    color: red; /* Cambia el color de la flecha */
+    margin-right: 10px; /* Espaciado entre la flecha y el texto */
+    font-size: 14px; /* Tamaño del icono */
+}
+
+.header-side-menu ul li a:hover {
+    color: #d1d1d1; /* Links en gris claro al pasar el mouse */
+}
+
+.header-contact-info {
+    font-size: 16px;
+    color: white; /* Cambia el color del texto */
+    line-height: 1.8; /* Mejora el espaciado entre líneas */
+}
+
+.header-contact-info i {
+    color: #fff; /* Color blanco para los íconos */
+    margin-right: 10px; /* Espaciado entre el ícono y el texto */
+    font-size: 18px; /* Tamaño del ícono */
+}
+
+.header-contact-info a {
+    color: white; /* Hace el enlace de "¿Cómo llegar?" blanco */
+    text-decoration: underline; /* Agrega subrayado al enlace */
+}
+
+.header-contact-info a:hover {
+    color: #ff0000; /* Cambia a rojo cuando pases el mouse sobre el enlace */
+}
+
+/* Estilo de los íconos sociales */
+.header-social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.header-social-icons a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+}
+
+.header-overlay.active {
+    display: block;
+}
+
+.header-side-menu.open {
+    left: 0; /* Mueve el menú a la pantalla */
+}

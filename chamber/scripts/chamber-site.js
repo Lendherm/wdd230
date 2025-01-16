@@ -36,17 +36,37 @@ document.addEventListener("DOMContentLoaded", () => {
 let currentIndex = 0; // Índice actual del carrusel
 
 function cargarGaleria() {
-  const gallery = document.getElementById("gallery");
-  const totalImages = 9;  // Número de imágenes en la galería
+    const gallery = document.getElementById("gallery");
+    const listaPalabras = [
+        "Networking",
+        "Capacitación",
+        "Sistema de Información",
+        "Servicio Legal",
+        "Agenda Empresarial",
+        "Servicios Turísticos",
+        "Comercio Internacional",
+        "Revista Digital",
+        "Clima"
+    ];
 
-  for (let i = 1; i <= totalImages; i++) {
-      const img = document.createElement("img");
-      img.src = `https://picsum.photos/800/550?random=${i}`;
-      img.alt = `Imagen ${i}`;
-      gallery.appendChild(img);
-  }
+    listaPalabras.forEach((palabra, index) => {
+        const imgContainer = document.createElement("div");
+        imgContainer.classList.add("img-container");
+
+        const img = document.createElement("img");
+        img.src = `https://picsum.photos/800/550?random=${index + 1}`;
+        img.alt = `Imagen ${index + 1}`;
+
+        const text = document.createElement("p");
+        text.textContent = palabra;
+        text.classList.add("gallery-text");
+
+        imgContainer.appendChild(img);
+        imgContainer.appendChild(text);
+        gallery.appendChild(imgContainer);
+    });
 }
-
+  
 function cargarCarrusel() {
   const carouselImages = document.getElementById("carousel-images");
   const totalImages = 5; // Número de imágenes en el carrusel

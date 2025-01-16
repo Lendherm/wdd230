@@ -1,50 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header Diseño</title>
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="./styles/chamber-site.css">
+    <link rel="stylesheet" href="/chamber/styles/header.css">
+    <title>Document</title>
 </head>
 
 <body>
     <header class="site-header">
-        <div class="container">
+        <div class="header_container">
             <!-- Ícono del menú hamburguesa -->
-            <div class="menu-icon" id="menu-toggle">
-                <span class="menu-icon-symbol">&#9776;</span>
-                <span class="menu-icon-text">Menú</span>
+            <div class="header-menu-icon" id="menu-toggle">
+                <span class="header-menu-icon-symbol">&#9776;</span>
+                <span class="header-menu-icon-text">Menú</span>
             </div>
 
             <!-- Aniversario -->
-            <div class="anniversary">
-                <div class="anniversary-title">Cumplimos</div>
-                <div class="anniversary-year">150 años</div>
-                <div class="anniversary-text">de unir, servir y representar</div>
+            <div class="header-anniversary">
+                <div class="header-anniversary-title">Cumplimos</div>
+                <div class="header-anniversary-year">150 años</div>
+                <div class="header-anniversary-text">de unir, servir y representar</div>
             </div>
 
             <!-- Logo -->
-            <div class="logo">
+            <div class="header-logo">
                 <img src="ruta/a/tu/logo.png" alt="Logo Cámara de Comercio">
-                <!-- Asegúrate de poner el link correcto de tu logo -->
             </div>
 
             <!-- Botón "Afiliarme" -->
-            <a href="#" class="affiliate-button">QUIERO AFILIARME</a>
+            <a href="#" class="header-affiliate-button">QUIERO AFILIARME</a>
         </div>
     </header>
 
     <!-- Menú lateral -->
-    <div class="overlay" id="overlay"></div>
-    <div class="side-menu" id="side-menu">
+    <div class="header-overlay" id="overlay"></div>
+    <div class="header-side-menu" id="side-menu">
         <nav>
             <h2>Menú Principal</h2>
             <ul>
-                <li><a href="/week01/chamber-site-plan.html"><i class="fas fa-arrow-right"></i> Inicio</a></li>
+                <li><a href="/week01/chamber-site.html"><i class="fas fa-arrow-right"></i> Inicio</a></li>
                 <li><a href="#"><i class="fas fa-arrow-right"></i> Servicios</a></li>
                 <li><a href="#"><i class="fas fa-arrow-right"></i> Representatividad</a></li>
                 <li><a href="#"><i class="fas fa-arrow-right"></i> Eventos</a></li>
@@ -55,7 +51,7 @@
                 <li><a href="#"><i class="fas fa-arrow-right"></i> Contacto</a></li>
             </ul>
 
-            <div class="contact-info">
+            <div class="header-contact-info">
                 <!-- Dirección con icono de mapa -->
                 <p>
                     <i class="fas fa-map-marker-alt"></i> Paseo de la Reforma 42 Colonia Centro, Alcaldía Cuauhtémoc,
@@ -73,7 +69,7 @@
                 <p><i class="fas fa-phone-alt"></i> 55 36-85-22-69</p>
             </div>
 
-            <ul class="social-icons">
+            <ul class="header-social-icons">
                 <li><a href="#" class="fab fa-facebook"></a></li>
                 <li><a href="#" class="fab fa-instagram"></a></li>
                 <li><a href="#" class="fab fa-twitter"></a></li>
@@ -83,32 +79,6 @@
         </nav>
     </div>
 
-    <main>
-        <div id="container">
-            <div id="main-image" class="main-image">
-                <!-- Carrusel de imágenes con botones -->
-                <div id="carousel">
-                    <button id="prev" class="carousel-btn">❮</button>
-                    <div id="carousel-images" class="carousel-images">
-                        <!-- Las imágenes del carrusel se agregarán dinámicamente -->
-                    </div>
-                    <button id="next" class="carousel-btn">❯</button>
-                </div>
-            </div>
-            <div id="gallery" class="gallery">
-                <!-- Las imágenes de la galería se agregarán dinámicamente -->
-            </div>
-        </div>
-    </main>
-
-    <!-- Corregir la etiqueta footer -->
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Luis Emilio Nathanael De la rosa Meneses, Mexico</p>
-        <p id="lastModified"></p>
-    </footer>
-
-    <script src="scripts/chamber-site.js"></script>
-    <script src="scripts/getDates.js"></script>
 </body>
 
 </html>

@@ -24,6 +24,17 @@ body, html {
     width: 100%;
 }
 
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Espacio entre los divs */
+    max-width: 1400px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0 ; /* Espaciado lateral */
+    width: 100%;
+}
+
 /* Estilo del menú */
 .menu-icon {
     display: flex;
@@ -265,6 +276,32 @@ body {
     height: auto;
     border-radius: 4px;
 }
+
+/* Estilo para contenedores de imágenes en la galería */
+.img-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 
 /* Carrusel de imágenes */
 #carousel {
