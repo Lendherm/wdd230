@@ -344,6 +344,22 @@ body {
     right: 0;
 }
 
+ul.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+ul.social-icons li a {
+    font-size: 2rem; /* Tamaño de los iconos */
+    color: #000; /* Color de los iconos */
+    text-decoration: none;
+}
+
+ul.social-icons li a:hover {
+    color: #007bff; /* Cambia el color cuando se pase el mouse */
+}
 
 
 /* Para pantallas pequeñas (apilar el carrusel y la galería) */
