@@ -24,7 +24,7 @@ body, html {
     width: 100%;
 }
 
-.header_container {
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -343,6 +343,8 @@ body {
 #next {
     right: 0;
 }
+
+
 
 /* Para pantallas pequeñas (apilar el carrusel y la galería) */
 @media (max-width: 1024px) {
