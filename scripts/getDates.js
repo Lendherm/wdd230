@@ -23,24 +23,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mostrar la fecha de la última modificación
     document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
+    // Obtener el botón de modo oscuro y el elemento body
+    const modeButton = document.querySelector("#mode");
+    const body = document.querySelector("body");
 
-    // Obtener el botón de modo oscuro y el elemento main
-const modeButton = document.querySelector("#mode");
-const main = document.querySelector("main");
-const body = document.querySelector("body");
+    // Event listener para cambiar entre modo claro y oscuro
+    modeButton.addEventListener("click", () => {
+        // Alternar la clase dark-mode en el body
+        body.classList.toggle("dark-mode");
 
-// Event listener para cambiar entre modo claro y oscuro
-modeButton.addEventListener("click", () => {
-    // Alternar la clase dark-mode en el body y el main
-    body.classList.toggle("dark-mode");
-    main.classList.toggle("dark-mode");
-
-    // Cambiar el ícono del botón dependiendo del modo
-    if (body.classList.contains("dark-mode")) {
-        modeButton.textContent = "🔆"; // Modo claro
-    } else {
-        modeButton.textContent = "🌙"; // Modo oscuro
-    }
-});
-
+        // Cambiar el ícono del botón dependiendo del modo
+        if (body.classList.contains("dark-mode")) {
+            modeButton.textContent = "🔆"; // Modo claro
+        } else {
+            modeButton.textContent = "🌙"; // Modo oscuro
+        }
+    });
 });
