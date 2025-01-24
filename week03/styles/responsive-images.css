@@ -1,0 +1,17 @@
+/* Contenedor principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Hero y comportamiento responsivo */
+.hero {
+    margin: 1rem 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

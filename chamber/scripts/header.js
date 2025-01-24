@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Crear el contenedor del header
     const header = document.createElement('header');
     header.classList.add('site-header');
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const logo = document.createElement('div');
     logo.classList.add('header-logo');
     const logoImg = document.createElement('img');
-    logoImg.src = 'ruta/a/tu/logo.png';
+    logoImg.src = '#';  // Debes agregar una URL válida aquí
     logoImg.alt = 'Logo Cámara de Comercio';
     logo.appendChild(logoImg);
 
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const ul = document.createElement('ul');
     const menuItems = [
-        { text: 'Inicio', link: '/week01/chamber-site.html' },
+        { text: 'Inicio', link: './index.' },
         { text: 'Servicios', link: '#' },
         { text: 'Representatividad', link: '#' },
         { text: 'Eventos', link: '#' },
@@ -82,14 +82,14 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: 'Directorio de Consejo', link: '#' },
         { text: 'Prensa', link: '#' },
         { text: 'Blog', link: '#' },
-        { text: 'Contacto', link: '#' }
+        { text: 'Contacto', link: '#' },
     ];
 
-    menuItems.forEach(item => {
+    menuItems.forEach((item) => {
         const li = document.createElement('li');
         const a = document.createElement('a');
         a.href = item.link;
-        a.innerHTML = `<i class="fas fa-arrow-right"></i> ${item.text}`;
+        a.innerHTML = `<i class="bi bi-arrow-right-circle"></i> ${item.text}`;  // Icono actualizado
         li.appendChild(a);
         ul.appendChild(li);
     });
@@ -97,16 +97,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactInfo = document.createElement('div');
     contactInfo.classList.add('header-contact-info');
     const contactDetails = [
-        { icon: 'fas fa-map-marker-alt', text: 'Paseo de la Reforma 42 Colonia Centro, Alcaldía Cuauhtémoc, C.P. 06040, Ciudad de México.' },
-        { icon: 'fas fa-envelope', text: 'primercontacto@ccmexico.com.mx' },
-        { icon: 'fab fa-whatsapp', text: '+52 55 7196 6356' },
-        { icon: 'fas fa-phone-alt', text: '55 36-85-22-69' }
+        { icon: 'bi-geo-alt', text: 'Paseo de la Reforma 42, CDMX.' },  // Clases corregidas
+        { icon: 'bi-envelope', text: 'primercontacto@ccmexico.com.mx' },
+        { icon: 'bi-whatsapp', text: '+52 55 7196 6356' },
+        { icon: 'bi-telephone', text: '55 36-85-22-69' },
     ];
 
-    contactDetails.forEach(detail => {
+    contactDetails.forEach((detail) => {
         const p = document.createElement('p');
         const icon = document.createElement('i');
-        icon.classList.add(detail.icon);
+        icon.classList.add(detail.icon);  // Aquí ahora agregamos las clases sin el espacio
         p.appendChild(icon);
         p.appendChild(document.createTextNode(` ${detail.text}`));
         contactInfo.appendChild(p);
@@ -115,14 +115,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const socialIcons = document.createElement('ul');
     socialIcons.classList.add('header-social-icons');
     const socialLinks = [
-        { class: 'fab fa-facebook' },
-        { class: 'fab fa-instagram' },
-        { class: 'fab fa-twitter' },
-        { class: 'fab fa-youtube' },
-        { class: 'fab fa-linkedin' }
+        { class: 'bi-facebook' },
+        { class: 'bi-instagram' },
+        { class: 'bi-twitter' },
+        { class: 'bi-youtube' },
+        { class: 'bi-linkedin' },
     ];
 
-    socialLinks.forEach(social => {
+    socialLinks.forEach((social) => {
         const li = document.createElement('li');
         const a = document.createElement('a');
         a.href = '#';
@@ -142,23 +142,69 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(overlay);
     document.body.appendChild(sideMenu);
 
-    // Funcionalidad del menú hamburguesa (toggle)
-    menuToggle.addEventListener('click', function() {
-        sideMenu.classList.toggle('open'); // Abre o cierra el menú
-        overlay.classList.toggle('active'); // Muestra u oculta el overlay
+    // Funcionalidad del menú hamburguesa
+    menuToggle.addEventListener('click', function () {
+        sideMenu.classList.toggle('open');
+        overlay.classList.toggle('active');
     });
 
     // Cerrar el menú al hacer clic en el overlay
-    overlay.addEventListener('click', function() {
+    overlay.addEventListener('click', function () {
         sideMenu.classList.remove('open');
         overlay.classList.remove('active');
     });
 
     // Cerrar el menú al hacer clic en un enlace dentro del menú
-    document.querySelectorAll('.header-side-menu a').forEach(link => {
-        link.addEventListener('click', () => {
+    document.querySelectorAll('.header-side-menu a').forEach((link) => {
+        link.addEventListener('click', function () {
             sideMenu.classList.remove('open');
             overlay.classList.remove('active');
         });
     });
+
+    // Obtener el tamaño de la pantalla
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    // Mostrar el tamaño de la pantalla en la consola
+    console.log(`El tamaño de la pantalla es: ${screenWidth}x${screenHeight}`);
+
+    // Estilos de .header-affiliate-button
+    console.log('Estilos de .header-affiliate-button:');
+    console.log('background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(112, 39, 224), rgb(236, 47, 75)) repeat scroll 0% 0% / auto padding-box border-box');
+    console.log('font-size: 16px');
+    console.log('padding: 10px 20px');
+
+    // Estilos de .header_container
+    console.log('Estilos de .header_container:');
+    console.log('flex-direction: row');
+    console.log('gap: 20px');
+    console.log('padding: 20px');
+
+    // Función para mostrar los estilos en consola
+    function logStyles() {
+        const affiliateButton = document.querySelector('.header-affiliate-button');
+        const headerContainer = document.querySelector('.header_container');
+
+        // Verificar los estilos actuales de los elementos
+        console.log('Estilos de .header-affiliate-button:');
+        console.log('background: ', getComputedStyle(affiliateButton).background);
+        console.log('font-size: ', getComputedStyle(affiliateButton).fontSize);
+        console.log('padding: ', getComputedStyle(affiliateButton).padding);
+
+        console.log('Estilos de .header_container:');
+        console.log('flex-direction: ', getComputedStyle(headerContainer).flexDirection);
+        console.log('gap: ', getComputedStyle(headerContainer).gap);
+        console.log('padding: ', getComputedStyle(headerContainer).padding);
+    }
+
+    // Llamar a la función para mostrar los estilos iniciales
+    logStyles();
+
+    // Evento de cambio de tamaño de la ventana
+    window.addEventListener('resize', function () {
+        logStyles();
+    });
+
+    
 });

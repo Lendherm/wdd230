@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 230 - Web Frontend Development, Luis Emilio Nathanael De la rosa Meneses, course assignment portal, responsive design, frontend development.">
+    <meta name="author" content="Luis Emilio Nathanael De la rosa Meneses">
+    <title>responsive-images</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/responsive-images.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Luis De la Rosa - WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lendherm.github.io/wdd230/images/profile.jpg">
+    <meta property="og:url" content="https://lendherm.github.io/wdd230/">
+    <meta property="og:description"
+        content="Portal del curso WDD 230: Desarrollo Frontend Web con actividades, aprendizaje y proyectos de Luis Emilio Nathanael De la Rosa Meneses.">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <!-- Header Section -->
+    <header>
+
+
+        <!-- Menú hamburguesa -->
+        <div id="menu-toggle" class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <nav class="header_nav">
+            <ul>
+                <li><a href="/index.html" class="active">Home</a></li>
+                <li><a href="chamber/chamber-site.html">Chamber</a></li>
+                <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+                <li><a href="#">Form</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botón para cambiar de modo -->
+        <div id="mode" class="mode-toggle">
+            🕶️
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+                <img src="images/hero-large.webp" alt="A beautiful temple surrounded by nature" width="1500"
+                    height="750">
+            </picture>
+        </div>
+
+    </main>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Luis Emilio Nathanael De la rosa Meneses, Mexico, wdd230</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
