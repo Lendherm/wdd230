@@ -8,13 +8,13 @@
     <meta name="description"
         content="WDD 230 - Web Frontend Development, Luis Emilio Nathanael De la rosa Meneses, course assignment portal, responsive design, frontend development.">
     <meta name="author" content="Luis Emilio Nathanael De la rosa Meneses">
-    <title>Luis De la rosa - WDD 230 - Web Frontend Development</title>
+    <title>Luis De la Rosa - WDD 230 - Web Frontend Development</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="scripts/getDates.js"></script>
+    <script src="scripts/getDates.js" defer></script>
 
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Luis De la Rosa - WDD 230 - Web Frontend Development">
@@ -26,7 +26,6 @@
 </head>
 
 <body>
-    <!-- Header Section -->
     <!-- Header Section -->
     <header>
         <div class="profile">
@@ -62,6 +61,18 @@
             <h1>WDD 230: Web Frontend Development</h1>
         </div>
 
+        <!-- Imagen de héroe con superposición -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/temple_lds_960.webp" media="(min-width: 961px)">
+                <source srcset="images/temple_lds_400.webp" media="(max-width: 960px)">
+                <img src="images/temple_lds_960.webp" alt="Templo de los Últimos Días" class="temple-hero-image">
+            </picture>
+            <div class="hero-overlay">
+                <h1>Templo de Salt Lake City</h1>
+            </div>
+        </section>
+
         <!-- Sección para las actividades de aprendizaje y la información -->
         <div class="main-content">
             <section class="card learning-activities">
@@ -71,7 +82,6 @@
                         <a href="#" class="submenu-toggle">Week 01: Layout | Media Query | JS Pen</a>
                         <ul class="submenu">
                             <li><a href="./week01/chamber-site-plan.html">Chamber Site Plan</a></li>
-
                             <li><a href="./week01/holygrail.html" target="_blank">Holy Grail</a></li>
                             <li><a href="./week01/media-query.html" target="_blank">Media Query</a></li>
                         </ul>
@@ -90,7 +100,6 @@
                             <li><a href="week03/lazyload.html">Lazyload</a></li>
                             <li><a href="week03/responsive-images.html">Responsive Images</a></li>
                             <li><a href="week03/bom.html">Bom</a></li>
-
                         </ul>
                     </li>
                     <li><a href="#">Week 04:</a></li>
@@ -99,19 +108,29 @@
                     <li><a href="#">Week 07:</a></li>
                 </ul>
             </section>
+
             <section class="card information">
                 <h2>Information</h2>
                 <p>Mexico, Mexico</p>
                 <p>☀️ 76°F - Sunshine</p>
-                <p id="visits">Page Visits: 15</p>
+                <p id="visits">Page Visits: <span id="visitCount">15</span></p>
             </section>
         </div>
+
+        <!-- Mapa de Google -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.7166641212788!2d-99.0168242889238!3d19.590212586855507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f1ba594e0bf7%3A0x1d1a7df6e35c1d1b!2sCondominio%20Morelos!5e0!3m2!1ses-419!2smx!4v1737851940310!5m2!1ses-419!2smx"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </main>
+
     <!-- Footer Section -->
     <footer>
         <p>&copy; <span id="currentYear"></span> Luis Emilio Nathanael De la rosa Meneses, Mexico, wdd230</p>
         <p id="lastModified"></p>
     </footer>
+
 
 </body>
 
