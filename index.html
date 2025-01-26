@@ -64,9 +64,10 @@
         <!-- Imagen de héroe con superposición -->
         <section class="hero">
             <picture>
-                <source srcset="images/temple_lds_960.webp" media="(min-width: 961px)">
-                <source srcset="images/temple_lds_400.webp" media="(max-width: 960px)">
-                <img src="images/temple_lds_960.webp" alt="Templo de los Últimos Días" class="temple-hero-image">
+                <source srcset="images/temple_lds_960.webp" loading="lazy" media="(min-width: 961px)">
+                <source srcset="images/temple_lds_400.webp" loading="lazy" media="(max-width: 960px)">
+                <img src="images/temple_lds_960.webp" alt="Templo de los Últimos Días" class="temple-hero-image"
+                    loading="lazy">
             </picture>
             <div class="hero-overlay">
                 <h2>Templo de Campinas</h2>
