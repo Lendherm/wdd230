@@ -1,27 +1,17 @@
-// Esperar a que el DOM cargue
-document.addEventListener("DOMContentLoaded", function () {
-    // Mostrar/Ocultar el menú de hamburguesa
-    document.getElementById("menu-toggle").addEventListener("click", function () {
+// getDates.js
+// Esperar a que el DOM se haya cargado completamente
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener el año actual y mostrarlo en el pie de página
+    const currentYear = new Date().getFullYear();
+    document.getElementById("currentYear").textContent = currentYear;
+
+    // Obtener la fecha de la última modificación y mostrarla en el pie de página
+    const lastModifiedDate = document.lastModified;
+    document.getElementById("lastModified").textContent = `Last modification: ${lastModifiedDate}`;
+
+    // Mostrar u ocultar el menú al hacer clic en el botón hamburguesa
+    document.getElementById("menu-toggle").addEventListener("click", function() {
         const nav = document.querySelector('nav ul');
-        nav.classList.toggle("show");
+        nav.classList.toggle("show");  // Alternar la clase 'show' que muestra el menú
     });
-
-    // Mostrar/Ocultar submenús al hacer clic en el enlace
-    document.querySelectorAll('.submenu-toggle').forEach(toggle => {
-        toggle.addEventListener('click', function (event) {
-            event.preventDefault(); // Evitar que el enlace recargue la página
-            const submenu = this.nextElementSibling; // Submenú relacionado
-            if (submenu) {
-                submenu.classList.toggle('show-submenu'); // Alternar la clase para mostrarlo
-            }
-        });
-    });
-
-    // Insertar el año actual en el footer
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-
-    // Mostrar la fecha de la última modificación
-    document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
-
-
 });
