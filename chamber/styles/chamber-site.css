@@ -362,6 +362,26 @@ ul.social-icons li a:hover {
 }
 
 
+/* Asegúrate de que el formulario esté en una capa superior */
+#affiliate-form-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;  /* Ajustar al 100% de la altura de la pantalla */
+    width: 0;  /* Inicialmente oculto */
+    overflow-y: auto;  /* Permitir desplazamiento si el contenido excede la altura */
+    transition: width 0.3s ease-in-out;
+    background-color: #f8f9fa;  /* Fondo claro */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);  /* Sombra a la izquierda */
+    z-index: 1050;  /* Para asegurarte de que está por encima de otros elementos */
+}
+
+/* Añadir transición suave */
+#affiliate-form-container.open {
+    width: 400px; /* Establecer el ancho del formulario cuando esté abierto */
+}
+
+
 /* Para pantallas pequeñas (apilar el carrusel y la galería) */
 @media (max-width: 1024px) {
     #container {
