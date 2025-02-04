@@ -35,19 +35,27 @@ document.addEventListener('DOMContentLoaded', function() {
 let currentIndex = 0; // Índice actual del carrusel
 
 // Mostrar mensaje sobre la última visita
+
 function mostrarMensajeVisita() {
     const lastVisit = localStorage.getItem('lastVisit');
     const currentVisit = Date.now();
     const messageElement = document.querySelector('.visit-message');
 
-    if (lastVisit) {
-        const daysBetween = Math.floor((currentVisit - lastVisit) / (1000 * 60 * 60 * 24));
-        const message = daysBetween < 1 ? 
-            '¡De vuelta tan pronto! ¡Increíble!' : 
-            `Te esperamos hace ${daysBetween} ${daysBetween === 1 ? 'día' : 'días'}.`;
-        messageElement.textContent = message;
+    if (!messageElement) {
+        console.error("Elemento '.visit-message' no encontrado en el DOM.");
+        return;
+    }
+
+    if (!lastVisit) {
+        messageElement.textContent = "Welcome! Let us know if you have any questions.";
     } else {
-        messageElement.textContent = '¡Bienvenido! Estamos felices de verte.';
+        const daysBetween = Math.floor((currentVisit - lastVisit) / (1000 * 60 * 60 * 24));
+
+        if (daysBetween < 1) {
+            messageElement.textContent = "Back so soon! Awesome!";
+        } else {
+            messageElement.textContent = `You last visited ${daysBetween} ${daysBetween === 1 ? 'day' : 'days'} ago.`;
+        }
     }
 
     localStorage.setItem('lastVisit', currentVisit);
@@ -103,7 +111,7 @@ function cargarGaleria() {
 // Cargar carrusel de imágenes aleatorias
 function cargarCarrusel() {
     const carouselImages = document.getElementById("carousel-images");
-    const totalImages = 5; // Número de imágenes en el carrusel
+    const totalImages = 10; // Número de imágenes en el carrusel
 
     // Aseguramos que las imágenes del carrusel y la galería no se repitan
     let carouselImageIds = [];
