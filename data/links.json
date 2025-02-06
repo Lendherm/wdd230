@@ -1,0 +1,113 @@
+{
+    "weeks": [
+      {
+        "week": "Week 01: Layout | Media Query | JS Pen",
+        "links": [
+          {
+            "url": "./week01/chamber-site-plan.html",
+            "title": "Chamber Site Plan"
+          },
+          {
+            "url": "./week01/holygrail.html",
+            "title": "Holy Grail",
+            "target": "_blank"
+          },
+          {
+            "url": "./week01/media-query.html",
+            "title": "Media Query",
+            "target": "_blank"
+          }
+        ]
+      },
+      {
+        "week": "Week 02",
+        "links": [
+          {
+            "url": "./week02/design.html",
+            "title": "Design",
+            "target": "_blank"
+          },
+          {
+            "url": "./week02/bom.html",
+            "title": "Bom",
+            "target": "_blank"
+          }
+        ]
+      },
+      {
+        "week": "Week 03",
+        "links": [
+          {
+            "url": "week03/images/paisaje.jpg.webp",
+            "title": "WebP"
+          },
+          {
+            "url": "week03/lazyload.html",
+            "title": "Lazyload"
+          },
+          {
+            "url": "week03/responsive-images.html",
+            "title": "Responsive Images"
+          },
+          {
+            "url": "week03/bom.html",
+            "title": "Bom"
+          },
+          {
+            "url": "chamber/discover.html",
+            "title": "W03 Project Milestone: The Chamber Discover Page"
+          }
+        ]
+      },
+      {
+        "week": "Week 04",
+        "links": [
+          {
+            "url": "https://codepen.io/Nathanael-Lendherm-De-La-Rosa-Meneses/pen/YPKgpmP",
+            "title": "🔒 CSS Pseudo-classes - sol"
+          },
+          {
+            "url": "./week04/images/Captura de pantalla 2025-01-30 122645.png",
+            "title": "CSS Combinators"
+          },
+          {
+            "url": "./week04/tablebuild.html",
+            "title": "HTML Tables for Data Presentation"
+          },
+          {
+            "url": "./week04/forms.html",
+            "title": "HTML Forms"
+          },
+          {
+            "url": "./week04/form.html",
+            "title": "W04: Team Activity - Form"
+          },
+          {
+            "url": "./chamber/join.html",
+            "title": "W04 Project Milestone: The Chamber Join Page"
+          }
+        ]
+      },
+      {
+        "week": "Week 05",
+        "links": [
+          {
+            "url": "https://codepen.io/Nathanael-Lendherm-De-La-Rosa-Meneses/pen/jENovGe",
+            "title": "🔒 CSS Psuedo Elements"
+          },
+          {
+            "url": "./week05/new-ward-members.json",
+            "title": "JSON"
+          },
+          {
+            "url": "./week05/prophets.html",
+            "title": "The Fetch API"
+          },
+          {
+            "url": "./week05/weather.html",
+            "title": "The Weather API"
+          }
+        ]
+      }
+    ]
+  }
