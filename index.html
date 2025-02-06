@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="scripts/getDates.js" defer></script>
-
+    <script src="scripts/weather.js"></script>
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Luis De la Rosa - WDD 230 - Web Frontend Development">
     <meta property="og:type" content="website">
@@ -155,10 +155,15 @@
                 </ul>
             </section>
 
-            <section class="card information">
-                <h2>Information</h2>
-                <p>Mexico, Mexico</p>
-                <p>☀️ 76°F - Sunshine</p>
+            <section class="card information weather-info">
+                <h2>Weather Information</h2>
+                <p id="location">Loading location...</p>
+                <p id="temperature">Loading temperature...</p>
+                <p id="weather-description">Loading weather description...</p>
+                <figure>
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                    <figcaption id="weather-caption"></figcaption>
+                </figure>
                 <p id="visits">Page Visits: <span id="visitCount">15</span></p>
             </section>
         </div>
