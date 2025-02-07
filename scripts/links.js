@@ -30,7 +30,7 @@ async function getLinks() {
                 displayNoDataMessage(); // Display message if no data is found
             }
         } else {
-            throw Error(await response.text());
+            throw new Error(await response.text());
         }
     } catch (error) {
         console.error(error);
@@ -47,7 +47,6 @@ function displayLinks(weeks) {
 
     // Loop through each week and create the HTML structure
     weeks.forEach(week => {
-        // Create the main list item for the week
         const weekItem = document.createElement('li');
 
         // Create the toggle link for the week
@@ -57,19 +56,27 @@ function displayLinks(weeks) {
         weekToggle.textContent = week.week;
         weekItem.appendChild(weekToggle);
 
-        // Create the submenu list
+        // Create the submenu list (hidden by default)
         const submenuList = document.createElement('ul');
         submenuList.classList.add('submenu');
+        submenuList.style.display = 'none';  // Initially hide the submenu
 
         // Add each link to the submenu
         week.links.forEach(link => {
             const linkItem = document.createElement('li');
             const linkAnchor = document.createElement('a');
-            linkAnchor.href = baseURL + link.url; // Use baseURL to construct the full path
+
+            // Check if the URL is absolute or relative
+            const fullUrl = link.url.startsWith('http') ? link.url : baseURL + link.url;
+
+            linkAnchor.href = fullUrl;  // Use the correct URL (absolute or relative)
             linkAnchor.textContent = link.title;
+
+            // Add target="_blank" if specified
             if (link.target) {
-                linkAnchor.target = link.target; // Add target="_blank" if specified
+                linkAnchor.target = link.target;
             }
+
             linkItem.appendChild(linkAnchor);
             submenuList.appendChild(linkItem);
         });
@@ -79,6 +86,22 @@ function displayLinks(weeks) {
 
         // Append the week item to the main list
         activityLinksContainer.appendChild(weekItem);
+
+        // Add click event to toggle visibility of the submenu
+        weekToggle.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default anchor behavior
+
+            // Close any other open submenus
+            const allSubmenus = document.querySelectorAll('.submenu');
+            allSubmenus.forEach(submenu => {
+                if (submenu !== submenuList) {
+                    submenu.style.display = 'none';  // Hide other submenus
+                }
+            });
+
+            // Toggle the current submenu visibility
+            submenuList.style.display = (submenuList.style.display === 'none' || submenuList.style.display === '') ? 'block' : 'none';
+        });
     });
 }
 
