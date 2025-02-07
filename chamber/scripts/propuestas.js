@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </ul>
                     <div class="d-flex gap-2">
                         <a href="#" class="btn btn-outline-primary">Conocer más</a>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <a href="/week04/forms.html" class="btn btn-primary comprarBtn">Comprar</a>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </ul>
                     <div class="d-flex gap-2">
                         <a href="#" class="btn btn-outline-primary">Conocer más</a>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <a href="/week04/forms.html" class="btn btn-primary comprarBtn">Comprar</a>
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </ul>
                     <div class="d-flex gap-2">
                         <a href="#" class="btn btn-outline-primary">Conocer más</a>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <a href="/week04/forms.html" class="btn btn-primary comprarBtn">Comprar</a>
                     </div>
                 </div>
             </div>
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </ul>
                     <div class="d-flex gap-2">
                         <a href="#" class="btn btn-outline-primary">Conocer más</a>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <a href="/week04/forms.html" class="btn btn-primary comprarBtn">Comprar</a>
                     </div>
                 </div>
             </div>
@@ -149,9 +149,7 @@ document.getElementById("close-form").addEventListener("click", function () {
         formContainer.style.width = "0";
     });
     
-    // Capturar la fecha y hora actual en el campo hidden
-    document.getElementById("timestamp").value = new Date().toISOString();
-    console.log("Fecha y hora capturada: " + new Date().toISOString());
+  
 
     // Agregar evento para mostrar el formulario
 affiliateButton.addEventListener("click", function (e) {

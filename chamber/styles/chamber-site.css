@@ -376,6 +376,11 @@ ul.social-icons li a:hover {
     z-index: 1050;  /* Para asegurarte de que está por encima de otros elementos */
 }
 
+.hidden {
+    display: none !important;
+}
+
+
 /* Añadir transición suave */
 #affiliate-form-container.open {
     width: 400px; /* Establecer el ancho del formulario cuando esté abierto */
