@@ -106,6 +106,10 @@
           {
             "url": "./week05/weather.html",
             "title": "The Weather API"
+          },
+          {
+            "url": "./chamber/directory.html",
+            "title": "Directory"
           }
         ]
       }
